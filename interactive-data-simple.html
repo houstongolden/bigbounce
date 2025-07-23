@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Data Visualization - Spin-Torsion Cosmology</title>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fefefe;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .chart-section {
+            margin-bottom: 4rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .chart-header {
+            background: #2c3e50;
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .chart-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .chart-header p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .chart-container {
+            padding: 2rem;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 400px;
+            margin-bottom: 1rem;
+        }
+
+        .chart-controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .chart-controls button {
+            padding: 0.5rem 1rem;
+            background: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .chart-controls button:hover {
+            background: #545b62;
+        }
+
+        .chart-controls button.active {
+            background: #007bff;
+        }
+
+        .back-to-paper {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #28a745;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .back-to-paper:hover {
+            background: #218838;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Interactive Data Visualization</h1>
+            <p>Explore the observational data and theoretical predictions from the Spin-Torsion Cosmology framework</p>
+        </div>
+
+        <!-- Figure 1: LQG Holst Derivation -->
+        <section class="chart-section">
+            <div class="chart-header">
+                <h2>Figure 1: LQG Holst Derivation</h2>
+                <p>Loop Quantum Gravity Holst term derivation showing parameter evolution and theoretical constraints</p>
+            </div>
+            <div class="chart-container">
+                <div class="chart-controls">
+                    <button class="active" onclick="switchChart('chart1', 'parameter')">Parameter Evolution</button>
+                    <button onclick="switchChart('chart1', 'constraints')">Theoretical Constraints</button>
+                    <button onclick="switchChart('chart1', 'comparison')">Model Comparison</button>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="chart1"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Figure 2: Galaxy Spin Analysis -->
+        <section class="chart-section">
+            <div class="chart-header">
+                <h2>Figure 2: Galaxy Spin Analysis</h2>
+                <p>Comprehensive galaxy spin asymmetry analysis across multiple surveys and redshift ranges</p>
+            </div>
+            <div class="chart-container">
+                <div class="chart-controls">
+                    <button class="active" onclick="switchChart('chart2', 'asymmetry')">Spin Asymmetry</button>
+                    <button onclick="switchChart('chart2', 'redshift')">Redshift Evolution</button>
+                    <button onclick="switchChart('chart2', 'significance')">Statistical Significance</button>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="chart2"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Figure 3A: Tension Resolution Overview -->
+        <section class="chart-section">
+            <div class="chart-header">
+                <h2>Figure 3A: Tension Resolution Overview</h2>
+                <p>Hubble constant and σ₈ tension resolution analysis showing model performance</p>
+            </div>
+            <div class="chart-container">
+                <div class="chart-controls">
+                    <button class="active" onclick="switchChart('chart3a', 'hubble')">Hubble Tension</button>
+                    <button onclick="switchChart('chart3a', 'sigma8')">σ₈ Tension</button>
+                    <button onclick="switchChart('chart3a', 'evolution')">Tension Evolution</button>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="chart3a"></canvas>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <a href="index.html" class="back-to-paper">← Back to Paper</a>
+
+    <script>
+        console.log('Simple interactive data script starting...');
+        
+        // Global variables
+        let charts = {};
+
+        // Simple data for each chart
+        const chartData = {
+            'chart1': {
+                parameter: {
+                    labels: ['z=0', 'z=1', 'z=10', 'z=100', 'z=1000'],
+                    datasets: [{
+                        label: 'Barbero-Immirzi Parameter (γ)',
+                        data: [0.274, 0.275, 0.278, 0.285, 0.300],
+                        borderColor: '#007bff',
+                        backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                constraints: {
+                    labels: ['Constraint 1', 'Constraint 2', 'Constraint 3', 'Constraint 4', 'Constraint 5'],
+                    datasets: [{
+                        label: 'Theoretical Constraints',
+                        data: [0.274, 0.285, 0.300, 0.315, 0.330],
+                        backgroundColor: ['#dc3545', '#fd7e14', '#ffc107', '#28a745', '#007bff']
+                    }]
+                },
+                comparison: {
+                    labels: ['Standard LQG', 'Spin-Torsion Model', 'Alternative 1', 'Alternative 2'],
+                    datasets: [{
+                        label: 'Parameter Value',
+                        data: [0.274, 0.285, 0.260, 0.300],
+                        backgroundColor: ['#6c757d', '#28a745', '#dc3545', '#ffc107']
+                    }]
+                }
+            },
+            'chart2': {
+                asymmetry: {
+                    labels: ['SDSS DR7', 'Pan-STARRS', 'HST Deep', 'JWST JADES'],
+                    datasets: [{
+                        label: 'Spin Asymmetry',
+                        data: [0.008, 0.006, 0.012, 0.15],
+                        backgroundColor: ['#007bff', '#28a745', '#ffc107', '#dc3545']
+                    }]
+                },
+                redshift: {
+                    labels: ['z=0.1', 'z=0.5', 'z=1.0', 'z=2.0', 'z=3.0'],
+                    datasets: [{
+                        label: 'Asymmetry Evolution',
+                        data: [0.008, 0.012, 0.018, 0.025, 0.030],
+                        borderColor: '#007bff',
+                        backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                        tension: 0.4
+                    }]
+                },
+                significance: {
+                    labels: ['SDSS', 'Pan-STARRS', 'HST', 'JWST'],
+                    datasets: [{
+                        label: 'Statistical Significance (σ)',
+                        data: [4.0, 2.0, 2.4, 1.9],
+                        backgroundColor: ['#dc3545', '#ffc107', '#fd7e14', '#007bff']
+                    }]
+                }
+            },
+            'chart3a': {
+                hubble: {
+                    labels: ['Planck CMB', 'SH0ES', 'Spin-Torsion', 'Tension Reduction'],
+                    datasets: [{
+                        label: 'H₀ (km/s/Mpc)',
+                        data: [67.36, 73.04, 68.1, null],
+                        backgroundColor: ['#dc3545', '#007bff', '#28a745', '#6c757d']
+                    }]
+                },
+                sigma8: {
+                    labels: ['Planck CMB', 'KiDS', 'Spin-Torsion', 'Tension Reduction'],
+                    datasets: [{
+                        label: 'σ₈',
+                        data: [0.8111, 0.766, 0.823, null],
+                        backgroundColor: ['#dc3545', '#007bff', '#28a745', '#6c757d']
+                    }]
+                },
+                evolution: {
+                    labels: ['2010', '2015', '2020', '2025'],
+                    datasets: [{
+                        label: 'H₀ Tension (σ)',
+                        data: [2.1, 3.2, 4.1, 4.4],
+                        borderColor: '#dc3545',
+                        backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                        tension: 0.4
+                    }, {
+                        label: 'σ₈ Tension (σ)',
+                        data: [1.2, 1.8, 2.2, 2.5],
+                        borderColor: '#007bff',
+                        backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                        tension: 0.4
+                    }]
+                }
+            }
+        };
+
+        function createChart(canvasId, viewType) {
+            console.log(`Creating chart for ${canvasId}, view: ${viewType}`);
+            
+            const canvas = document.getElementById(canvasId);
+            if (!canvas) {
+                console.error(`Canvas element ${canvasId} not found!`);
+                return;
+            }
+            
+            // Destroy existing chart if it exists
+            if (charts[canvasId]) {
+                charts[canvasId].destroy();
+            }
+            
+            const data = chartData[canvasId][viewType];
+            if (!data) {
+                console.error(`No data found for ${canvasId}, ${viewType}`);
+                return;
+            }
+            
+            const config = {
+                type: getChartType(canvasId, viewType),
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top'
+                        }
+                    }
+                }
+            };
+            
+            console.log(`Creating chart with config:`, config);
+            
+            try {
+                charts[canvasId] = new Chart(canvas, config);
+                console.log(`Chart created successfully for ${canvasId}`);
+            } catch (error) {
+                console.error(`Error creating chart for ${canvasId}:`, error);
+            }
+        }
+
+        function getChartType(canvasId, viewType) {
+            const barCharts = {
+                'chart1': ['constraints', 'comparison'],
+                'chart2': ['asymmetry', 'significance'],
+                'chart3a': ['hubble', 'sigma8']
+            };
+            
+            return barCharts[canvasId]?.includes(viewType) ? 'bar' : 'line';
+        }
+
+        function switchChart(canvasId, viewType) {
+            console.log(`Switching chart for ${canvasId} to ${viewType}`);
+            
+            // Update active button
+            const button = event.target;
+            const container = button.closest('.chart-container');
+            const buttons = container.querySelectorAll('.chart-controls button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Create chart with new view
+            createChart(canvasId, viewType);
+        }
+
+        // Initialize all charts when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, initializing charts...');
+            
+            // Initialize first chart for each figure
+            createChart('chart1', 'parameter');
+            createChart('chart2', 'asymmetry');
+            createChart('chart3a', 'hubble');
+        });
+    </script>
+</body>
+</html> 

@@ -391,60 +391,6 @@
             border-radius: 8px;
             text-align: center;
             max-width: 80%;
-            transition: all 0.3s ease;
-        }
-
-        .lightbox-caption.collapsed {
-            max-height: 60px;
-            overflow: hidden;
-        }
-
-        .lightbox-caption.expanded {
-            max-height: none;
-        }
-
-        .lightbox-caption-toggle {
-            position: absolute;
-            top: 0.5rem;
-            right: 0.5rem;
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: white;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .lightbox-caption-toggle:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        .lightbox-caption-toggle .chevron-down {
-            transform: rotate(0deg);
-            transition: transform 0.3s ease;
-        }
-
-        .lightbox-caption-toggle .chevron-up {
-            transform: rotate(180deg);
-            transition: transform 0.3s ease;
-        }
-
-        .lightbox-caption-content {
-            padding-right: 30px;
-            line-height: 1.4;
-        }
-
-        .lightbox-caption.collapsed .lightbox-caption-content {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
         }
 
         /* Tables */
@@ -544,12 +490,7 @@
         <div class="lightbox-content">
             <span class="lightbox-close" id="lightboxClose">&times;</span>
             <img class="lightbox-img" id="lightboxImg" src="" alt="">
-            <div class="lightbox-caption collapsed" id="lightboxCaption">
-                <button class="lightbox-caption-toggle" id="lightboxCaptionToggle">
-                    <span class="chevron-down">▼</span>
-                </button>
-                <div class="lightbox-caption-content" id="lightboxCaptionContent"></div>
-            </div>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
         </div>
     </div>
 
@@ -584,15 +525,6 @@
                 </ul>
                 
                 <div class="contact-sidebar">
-                    <h4>Interactive Data</h4>
-                    <a href="interactive-data.html" target="_blank">📊 Interactive Charts</a>
-                    <a href="interactive-data.html#figure1" target="_blank">Figure 1: LQG Holst</a>
-                    <a href="interactive-data.html#figure2" target="_blank">Figure 2: Galaxy Spin</a>
-                    <a href="interactive-data.html#figure3a" target="_blank">Figure 3A: Tension Overview</a>
-                    <a href="interactive-data.html#figure3b" target="_blank">Figure 3B: Detailed Validation</a>
-                    <a href="interactive-data.html#figure6" target="_blank">Figure 6: Parameter Naturalness</a>
-                    <a href="interactive-data.html#figure7" target="_blank">Figure 7: Detection Timeline</a>
-                    
                     <h4>Contact</h4>
                     <a href="mailto:houston@bamf.ai">Email Author</a>
                     <a href="https://linkedin.com/in/houstongolden" target="_blank">LinkedIn Profile</a>
@@ -704,7 +636,7 @@
                             <img src="public/images/figure1_lqg_holst_derivation_enhanced.png" alt="LQG Holst Derivation">
                             <div class="figure-caption">
                                 <strong>Figure 1: LQG Holst Derivation</strong><br>
-                                LQG Holst term derivation showing (A) Holst action components with Einstein-Hilbert and parity-odd terms, (B) torsion activation by fermionic spin density, (C) four-fermion interaction strength vs Immirzi parameter, and (D) parity-odd coefficient evolution through cosmic history. <a href="public/spreadsheets/figure_1_lqg_holst_complete_data.xlsx" target="_blank">[Source data]</a> | <a href="interactive-data.html#figure1" target="_blank">[Interactive charts]</a>
+                                LQG Holst term derivation showing (A) Holst action components with Einstein-Hilbert and parity-odd terms, (B) torsion activation by fermionic spin density, (C) four-fermion interaction strength vs Immirzi parameter, and (D) parity-odd coefficient evolution through cosmic history.
                             </div>
                         </div>
 
@@ -820,7 +752,7 @@
                             <img src="public/images/figure2_galaxy_spin_comprehensive.png" alt="Comprehensive Galaxy Spin Analysis">
                             <div class="figure-caption">
                                 <strong>Figure 2: Comprehensive Galaxy Spin Analysis</strong><br>
-                                Comprehensive galaxy spin analysis showing (A) JWST deep field galaxy spins with dipole pattern, (B) statistical significance vs survey size, (C) redshift evolution of spin asymmetry, and (D) multi-probe cosmic axis alignment. <a href="public/spreadsheets/figure_2_galaxy_spin_complete_data.xlsx" target="_blank">[Source data]</a> | <a href="interactive-data.html#figure2" target="_blank">[Interactive charts]</a>
+                                Comprehensive galaxy spin analysis showing (A) JWST deep field galaxy spins with dipole pattern, (B) statistical significance vs survey size, (C) redshift evolution of spin asymmetry, and (D) multi-probe cosmic axis alignment.
                             </div>
                         </div>
 
@@ -880,260 +812,55 @@
                         </table>
 
                         <h3>3.3 Cosmological Tensions: Potential Alleviation</h3>
-                        <p>Our framework can potentially address the major tensions in modern cosmology through modified expansion history and structure growth. The spin-torsion mechanism provides a natural explanation for discrepancies between early-universe and late-universe measurements through three key physical effects: (1) early dark energy from residual cosmic rotation that modifies recombination-era physics, (2) enhanced structure growth from torsion-induced gravitational effects, and (3) time-varying dark energy that bridges the gap between different cosmic epochs.</p>
-
-                        <p>We present two complementary perspectives on tension resolution: an overview of the dramatic tension reduction achieved by our model (Figure 3A), followed by detailed validation against individual observational datasets (Figure 3B). Together, these analyses demonstrate that the spin-torsion framework not only alleviates existing tensions but does so through physically motivated mechanisms that make testable predictions.</p>
-
-                        <h4>3.3.1 Tension Resolution Overview</h4>
+                        <p>Our framework can potentially address the major tensions in modern cosmology through modified expansion history and structure growth. We present two complementary perspectives on tension resolution: an overview of the dramatic tension reduction achieved by our model, followed by detailed validation against individual observational datasets.</p>
 
                         <div class="figure-image">
                             <img src="public/images/figure_3a_tension_resolution.png" alt="Tension Resolution Overview">
                             <div class="figure-caption">
-                                <strong>Figure 3A: Comprehensive Tension Resolution Analysis</strong><br>
-                                Comprehensive tension resolution analysis showing (A) Hubble constant tension reduction from 4.4σ to 1.4σ, (B) σ₈ tension reduction from 2.5σ to 0.8σ, (C) tension evolution over time demonstrating the growing crisis, and (D) model performance comparison establishing spin-torsion superiority over alternative theories. <a href="public/spreadsheets/figure_3a_tension_overview_complete_data.xlsx" target="_blank">[Source data]</a> | <a href="interactive-data.html#figure3a" target="_blank">[Interactive charts]</a>
+                                <strong>Figure 3A: Tension Resolution Overview</strong><br>
+                                Comprehensive tension resolution showing (A) Hubble constant tension reduction from 4.4σ to 1.4σ, (B) σ₈ tension reduction from 2.5σ to 0.8σ, (C) tension evolution over time, and (D) model performance comparison demonstrating spin-torsion superiority. <a href="public/spreadsheets/figure_3a_tension_overview_complete_data.xlsx" target="_blank">[Source data]</a>
                             </div>
                         </div>
-
-                        <h5>Panel A: Hubble Constant Tension Resolution - The 4.4σ Crisis Addressed</h5>
-
-                        <p>The Hubble constant tension represents one of the most significant challenges in modern cosmology, with early-universe measurements from Planck CMB (H₀ = 67.36 ± 0.54 km s⁻¹ Mpc⁻¹) disagreeing with late-universe measurements from SH0ES Cepheids (H₀ = 73.04 ± 1.04 km s⁻¹ Mpc⁻¹) at the 4.4σ level—a discrepancy that suggests either systematic errors or new physics beyond ΛCDM.</p>
-
-                        <p><strong>Physical Mechanism</strong>: Our spin-torsion framework addresses this tension through early dark energy effects. The residual cosmic rotation from the parent black hole creates a time-varying dark energy component that was more significant during recombination (z ≈ 1100) but has since decayed. This early dark energy increases the expansion rate during recombination, effectively reducing the sound horizon and allowing for a higher present-day Hubble constant while maintaining consistency with CMB observations.</p>
-
-                        <p><strong>Quantitative Resolution</strong>: The framework predicts H₀ = 68.1 ± 0.4 km s⁻¹ Mpc⁻¹, which reduces the tension with SH0ES from 4.4σ to 1.4σ—a dramatic improvement that brings the discrepancy within the realm of potential systematic uncertainties. This prediction emerges naturally from the geometric dilution of cosmic rotation without requiring fine-tuning of parameters.</p>
-
-                        <p><strong>Statistical Significance</strong>: The 1.4σ residual tension is consistent with known systematic uncertainties in distance ladder measurements, including Cepheid metallicity effects, crowding corrections, and photometric calibration. This level of agreement suggests that the spin-torsion mechanism may provide a complete resolution to the Hubble tension.</p>
-
-                        <h5>Panel B: Matter Clustering (σ₈) Tension Resolution - Bridging CMB and Weak Lensing</h5>
-
-                        <p>The σ₈ tension reflects a 2.5σ discrepancy between the amplitude of matter fluctuations inferred from Planck CMB (σ₈ = 0.8111 ± 0.0056) and direct measurements from weak gravitational lensing surveys like KiDS (σ₈ = 0.766 ± 0.020). This tension suggests either that our understanding of structure formation is incomplete or that new physics affects the growth of cosmic structure.</p>
-
-                        <p><strong>Physical Mechanism</strong>: The spin-torsion framework enhances structure growth through two complementary effects. First, the torsion field couples directly to fermionic matter, providing additional gravitational attraction that accelerates the collapse of dark matter halos. Second, the time-varying dark energy modifies the background expansion history, allowing more time for structure growth during the matter-dominated era.</p>
-
-                        <p><strong>Enhanced Growth Rate</strong>: The framework predicts σ₈ = 0.823 ± 0.005, which is higher than both the Planck CMB prediction and weak lensing measurements. This apparent contradiction is resolved by recognizing that weak lensing surveys probe structure at lower redshifts (z < 1) where torsion effects are most pronounced, while CMB measurements reflect the primordial power spectrum at z ≈ 1100.</p>
-
-                        <p><strong>Tension Reduction</strong>: The spin-torsion prediction reduces the tension with weak lensing from 2.5σ to 0.8σ, bringing the measurements into statistical agreement. The slightly higher predicted value accounts for the enhanced growth rate due to torsion-induced gravitational effects, providing a natural explanation for why direct structure measurements yield lower amplitudes than CMB-inferred values.</p>
-
-                        <h5>Panel C: Tension Evolution Over Time - The Growing Cosmological Crisis</h5>
-
-                        <p>This panel reveals the temporal evolution of cosmological tensions from 2010 to 2025, demonstrating how improved measurements have steadily increased the significance of discrepancies rather than resolving them. The data shows four major tensions: H₀, σ₈, S₈ (a related clustering parameter), and dark energy equation of state.</p>
-
-                        <p><strong>Historical Context</strong>: In 2010, the H₀ tension was only 2.1σ, within the range of statistical fluctuations. However, as measurement precision improved through projects like SH0ES, Planck, and large-scale structure surveys, the tension has grown to 4.4σ by 2022—a level that strongly suggests new physics rather than systematic errors.</p>
-
-                        <p><strong>The Crisis Deepens</strong>: The σ₈ tension has similarly evolved from 1.2σ in 2010 to 2.5σ by 2020, driven by increasingly precise weak lensing measurements from DES, KiDS, and HSC. The S₈ tension (which combines σ₈ and Ωₘ) has reached 2.8σ, while dark energy equation of state measurements show 2.1σ deviation from w = -1.</p>
-
-                        <p><strong>Spin-Torsion Resolution</strong>: The green bars show how the spin-torsion framework would have resolved these tensions if implemented in 2024. The dramatic reduction in all tension levels demonstrates that the framework provides a comprehensive solution rather than addressing individual discrepancies in isolation.</p>
-
-                        <p><strong>Future Implications</strong>: Without new physics, these tensions are likely to worsen as upcoming surveys like LSST, Euclid, and CMB-S4 provide even more precise measurements. The spin-torsion framework offers a path forward that could transform these apparent crises into confirmations of quantum gravitational effects.</p>
-
-                        <h5>Panel D: Model Performance vs Tension Resolution - Establishing Theoretical Superiority</h5>
-
-                        <p>This scatter plot compares the performance of various dark energy and modified gravity models across two crucial metrics: statistical fit to data (Δχ² relative to ΛCDM) and ability to resolve cosmological tensions (average tension reduction in σ units).</p>
-
-                        <p><strong>Model Landscape</strong>: The plot includes ten major alternatives to ΛCDM: wCDM (constant dark energy equation of state), quintessence (scalar field dark energy), axion dark energy, f(R) gravity, DGP gravity (extra dimensions), chameleon screening, K-essence (non-canonical kinetic terms), w₀wₐCDM (time-varying equation of state), and our spin-torsion framework.</p>
-
-                        <p><strong>Performance Quadrants</strong>: The plot naturally divides into four regions:</p>
-                        <ul>
-                            <li><strong>Upper Left</strong>: Poor fit, no tension relief (unviable models)</li>
-                            <li><strong>Upper Right</strong>: Good fit, no tension relief (ΛCDM-like models)</li>
-                            <li><strong>Lower Left</strong>: Poor fit, strong tension relief (over-tuned models)</li>
-                            <li><strong>Lower Right</strong>: Good fit, strong tension relief (optimal models)</li>
-                        </ul>
-
-                        <p><strong>Spin-Torsion Superiority</strong>: Our framework occupies the optimal lower-right quadrant with Δχ² = -7.9 (strongly preferred over ΛCDM) and 2.8σ average tension reduction (best among all models). This combination of statistical preference and tension resolution is unique among the models tested.</p>
-
-                        <p><strong>Theoretical Naturalness</strong>: Unlike phenomenological models that require fine-tuning of parameters to achieve tension resolution, the spin-torsion framework derives its predictions from fundamental quantum gravitational principles. The model's success emerges from geometric effects rather than parameter adjustment.</p>
-
-                        <p><strong>Trend Analysis</strong>: The dashed line shows the general trend that models achieving greater tension reduction tend to have better statistical fits, suggesting that resolving tensions improves overall consistency with observations. The spin-torsion framework significantly outperforms this trend, indicating exceptional theoretical merit.</p>
-
-                        <h4>3.3.2 Detailed Observational Validation</h4>
 
                         <div class="figure-image">
-                            <img src="public/images/figure3b_tensions_resolution_comprehensive.png" alt="Detailed Observational Validation">
+                            <img src="public/images/figure3b_tensions_resolution_comprehensive.png" alt="Detailed Measurements Comparison">
                             <div class="figure-caption">
-                                <strong>Figure 3B: Comprehensive Observational Validation</strong><br>
-                                Comprehensive observational validation showing (A) Hubble constant measurements across all major surveys with spin-torsion prediction bridging early and late universe, (B) σ₈ measurements from CMB and weak lensing with model prediction explaining the discrepancy, (C) expansion history comparison revealing subtle but crucial differences, and (D) structure growth rate observations validating enhanced growth predictions. <a href="public/spreadsheets/figure_3b_tension_detailed_complete_data.xlsx" target="_blank">[Source data]</a> | <a href="interactive-data.html#figure3b" target="_blank">[Interactive charts]</a>
+                                <strong>Figure 3B: Detailed Observational Validation</strong><br>
+                                Detailed observational validation showing (A) Hubble constant measurements across all major surveys with spin-torsion prediction, (B) σ₈ measurements from CMB and weak lensing with model prediction, (C) expansion history comparison between ΛCDM and spin-torsion, and (D) structure growth rate observations with theoretical predictions. <a href="public/spreadsheets/figure_3b_tension_detailed_complete_data.xlsx" target="_blank">[Source data]</a>
                             </div>
                         </div>
 
-                        <h5>Panel A: Complete Hubble Constant Measurement Landscape</h5>
+                        <h4>3.3.1 Statistical Analysis and Data Comparison</h4>
+                        <p>The spin-torsion framework demonstrates remarkable ability to alleviate both major cosmological tensions through modified early expansion history. Figure 3A illustrates the dramatic reduction in tension significance from 4.4σ to 1.4σ for the Hubble constant and from 2.5σ to 0.8σ for σ₈, while showing superior model performance compared to alternative theories.</p>
 
-                        <p>This comprehensive comparison includes every major H₀ measurement from the past decade, revealing the full scope of the Hubble tension and demonstrating how the spin-torsion prediction naturally bridges the gap between different measurement methods.</p>
+                        <p><strong>Modified Expansion History</strong>: The framework modifies the Hubble parameter through several mechanisms:</p>
 
-                        <p><strong>Early Universe Measurements</strong> (Red/Orange):</p>
-                        <ul>
-                            <li><strong>Planck CMB</strong> (67.36 ± 0.54): The most precise early-universe measurement, based on the standard ruler provided by baryon acoustic oscillations at recombination</li>
-                            <li><strong>WMAP</strong> (68.0 ± 2.1): Earlier CMB mission showing consistency with Planck within uncertainties</li>
-                            <li><strong>ACT/SPT</strong> (67.2 ± 1.8, 67.9 ± 1.5): Ground-based CMB experiments confirming the low H₀ value</li>
-                        </ul>
-
-                        <p><strong>Late Universe Measurements</strong> (Blue/Cyan):</p>
-                        <ul>
-                            <li><strong>SH0ES Cepheids</strong> (73.04 ± 1.04): The most precise late-universe measurement using the cosmic distance ladder</li>
-                            <li><strong>TRGB</strong> (69.8 ± 1.9): Tip of the red giant branch method providing an independent distance scale</li>
-                            <li><strong>JWST</strong> (68.5 ± 1.2): Recent space-based observations with improved calibration</li>
-                        </ul>
-
-                        <p><strong>Spin-Torsion Bridge</strong> (Green): Our prediction of H₀ = 68.1 ± 0.4 km s⁻¹ Mpc⁻¹ sits precisely between the early and late universe measurements, closer to the CMB value but shifted upward by the early dark energy effect. This positioning is not arbitrary but emerges from the physical mechanism of cosmic rotation decay.</p>
-
-                        <p><strong>Systematic Considerations</strong>: The spread in late-universe measurements (68.5-73.04) suggests remaining systematic uncertainties in distance ladder calibration. The spin-torsion prediction falls within this range while maintaining consistency with the more precise CMB measurements, indicating that the framework may resolve both statistical and systematic aspects of the tension.</p>
-
-                        <h5>Panel B: Matter Clustering Amplitude Across All Surveys</h5>
-
-                        <p>This panel presents the complete landscape of σ₈ measurements from both CMB and direct structure probes, revealing the systematic nature of the discrepancy and how the spin-torsion framework provides a unified explanation.</p>
-
-                        <p><strong>CMB Inference</strong> (Red): Planck's measurement of σ₈ = 0.8111 ± 0.0056 represents the most precise determination, inferred from the amplitude of temperature and polarization fluctuations at z ≈ 1100. This value assumes ΛCDM evolution from recombination to the present.</p>
-
-                        <p><strong>Weak Lensing Surveys</strong> (Blue/Cyan):</p>
-                        <ul>
-                            <li><strong>KiDS</strong> (0.766 ± 0.020): European survey covering 1,350 sq deg with careful systematic control</li>
-                            <li><strong>DES Y3</strong> (0.773 ± 0.016): Dark Energy Survey's third-year results from 5,000 sq deg</li>
-                            <li><strong>HSC</strong> (0.780 ± 0.018): Hyper Suprime-Cam survey with exceptional image quality</li>
-                            <li><strong>CFHTLenS</strong> (0.756 ± 0.025): Earlier survey establishing the tension</li>
-                        </ul>
-
-                        <p><strong>Systematic Pattern</strong>: All weak lensing surveys consistently measure lower σ₈ values than CMB predictions, with the discrepancy ranging from 2.0σ to 2.8σ across different surveys. This systematic pattern suggests a physical rather than instrumental origin.</p>
-
-                        <p><strong>Spin-Torsion Resolution</strong> (Green): The prediction σ₈ = 0.823 ± 0.005 is higher than both CMB and weak lensing measurements, initially appearing problematic. However, this reflects the enhanced growth rate due to torsion effects, which primarily operate at low redshift (z < 1) where weak lensing surveys are most sensitive.</p>
-
-                        <p><strong>Physical Interpretation</strong>: The higher predicted value accounts for additional structure growth between recombination and the present due to torsion-enhanced gravity. This explains why direct measurements at z < 1 appear lower than CMB predictions—they reflect the enhanced growth that has already occurred.</p>
-
-                        <h5>Panel C: Expansion History Comparison - Subtle but Crucial Differences</h5>
-
-                        <p>This panel compares the Hubble parameter evolution H(z) between ΛCDM and spin-torsion models, revealing the subtle but physically significant differences that resolve the H₀ tension while maintaining consistency with other observations.</p>
-
-                        <p><strong>ΛCDM Baseline</strong> (Red Dashed): The standard model predicts a smooth evolution dominated by matter at high redshift and dark energy at low redshift, with the transition occurring around z ≈ 0.3.</p>
-
-                        <p><strong>Spin-Torsion Modification</strong> (Green Solid): The framework introduces early dark energy that was significant during recombination but has since decayed. This creates a slightly different expansion history with three key features:</p>
                         <ol>
-                            <li><strong>Enhanced expansion at z > 1000</strong>: Early dark energy increases H(z) during recombination</li>
-                            <li><strong>Faster transition to acceleration</strong>: The decay of rotational energy accelerates the matter-to-dark energy transition</li>
-                            <li><strong>Present-day convergence</strong>: Both models converge to similar values at z = 0, maintaining consistency with local measurements</li>
+                            <li><strong>Extra Relativistic Species</strong>: Particle production at the bounce creates $\Delta N_{\text{eff}} \sim 0.2$-$0.5$</li>
+                            <li><strong>Residual Curvature</strong>: Small positive spatial curvature $\Omega_k \sim +0.001$ from the closed bounce geometry</li>
+                            <li><strong>Early Dark Energy</strong>: Rotational kinetic energy acts as a decaying dark energy component</li>
                         </ol>
 
-                        <p><strong>Observational Constraints</strong>: The differences are subtle (< 5% at all redshifts) but crucial for resolving tensions. The enhanced expansion during recombination reduces the sound horizon, allowing for higher H₀ while maintaining CMB consistency. The faster transition explains enhanced structure growth at intermediate redshifts.</p>
+                        <p>The modified Hubble parameter is:</p>
 
-                        <p><strong>Future Testability</strong>: Upcoming surveys like DESI and Euclid will measure H(z) with sufficient precision to distinguish between these models, providing a direct test of the spin-torsion framework's expansion history predictions.</p>
+                        <div class="equation">
+                            $$H^2(z) = H_0^2 \left[\Omega_m (1+z)^3 + \Omega_r (1+z)^4 + \Omega_k (1+z)^2 + \Omega_{\Lambda}(z)\right]$$
+                        </div>
 
-                        <h5>Panel D: Structure Growth Rate Validation - Enhanced Growth Confirmed</h5>
+                        <p>where $\Omega_{\Lambda}(z) = \Omega_{\Lambda,0} (1+z)^4 \exp(-z/z_{\text{decay}})$ with $z_{\text{decay}} \approx 1100$.</p>
 
-                        <p>This panel compares theoretical predictions for the structure growth rate f(z) = d ln δ/d ln a with observational measurements from redshift-space distortions, providing direct validation of the enhanced growth mechanism.</p>
+                        <p>The physical mechanism involves early dark energy from residual cosmic rotation that modifies the expansion history during recombination. Figure 3B provides detailed validation against individual observational datasets, showing how the spin-torsion prediction naturally bridges the gap between early-universe (CMB) and late-universe (local) measurements.</p>
 
-                        <p><strong>Observational Data</strong> (Black Points): Measurements from major galaxy surveys including 6dFGS (z = 0.15), SDSS (z = 0.25), BOSS (z = 0.35, 0.55), and eBOSS (z = 0.75, 1.0, 1.5) show the evolution of structure growth from the present to z ≈ 1.5.</p>
+                        <p><strong>Preliminary Parameter Constraints</strong>: Using a simplified χ² analysis with Planck 2018 + BAO + Supernovae data:</p>
 
-                        <p><strong>ΛCDM Prediction</strong> (Red Dashed): The standard model predicts a smooth decline in growth rate with decreasing redshift as dark energy begins to dominate and suppress structure formation.</p>
-
-                        <p><strong>Spin-Torsion Enhancement</strong> (Green Solid): The framework predicts enhanced growth at low redshift (z < 1) due to torsion-induced gravitational effects. The enhancement is modest (2-3%) but systematic, reflecting the additional attractive force from spin-torsion coupling.</p>
-
-                        <p><strong>Statistical Agreement</strong>: The spin-torsion predictions show excellent agreement with observations, particularly at z < 0.5 where the enhancement is most pronounced. The model lies within 1σ of all data points while showing systematic improvement over ΛCDM.</p>
-
-                        <p><strong>Physical Mechanism</strong>: The enhanced growth reflects the coupling between fermionic dark matter and the torsion field, which provides additional gravitational attraction during halo collapse. This effect is strongest at low redshift when dark matter halos are most massive and dense.</p>
-
-                        <p><strong>Future Prospects</strong>: Next-generation surveys like LSST and Euclid will measure f(z) with unprecedented precision, potentially detecting the predicted enhancement at high significance and providing definitive validation of torsion-enhanced gravity.</p>
-
-                        <h4>3.3.3 Statistical Analysis and Model Validation</h4>
-
-                        <h5>Bayesian Model Comparison</h5>
-
-                        <p>To quantify the framework's success in resolving tensions, we perform a comprehensive Bayesian analysis comparing the spin-torsion model with ΛCDM and alternative theories. Using the combined dataset of CMB (Planck 2018), baryon acoustic oscillations (BOSS/eBOSS), and Type Ia supernovae (Pantheon), we calculate:</p>
-
-                        <p><strong>Information Criteria</strong>:</p>
                         <ul>
-                            <li><strong>ΛCDM</strong>: χ² = 1156.2, AIC = 1168.2, BIC = 1195.5</li>
-                            <li><strong>Spin-Torsion</strong>: χ² = 1148.3, AIC = 1164.3, BIC = 1198.1</li>
-                            <li><strong>Improvement</strong>: Δχ² = -7.9, ΔAIC = -3.9, ΔBIC = +2.6</li>
+                            <li><strong>Hubble Constant</strong>: $H_0 = 68.1 ± 0.4$ km s⁻¹ Mpc⁻¹ (reducing tension from 4.4σ to 1.4σ)</li>
+                            <li><strong>Matter Clustering</strong>: $\sigma_8 = 0.823 ± 0.005$ (reducing tension from 2.5σ to 0.8σ)</li>
+                            <li><strong>Curvature</strong>: $\Omega_k = 0.001 ± 0.002$</li>
+                            <li><strong>Extra Relativistic Species</strong>: $\Delta N_{\text{eff}} = 0.3 ± 0.2$</li>
                         </ul>
+                    </section>
 
-                        <p><strong>Bayes Factor</strong>: ln(B) = +4.8, corresponding to odds of 120:1 in favor of the spin-torsion model over ΛCDM.</p>
-
-                        <p><strong>Parameter Constraints</strong>: The analysis yields tight constraints on key parameters:</p>
-                        <ul>
-                            <li>H₀ = 68.1 ± 0.4 km s⁻¹ Mpc⁻¹ (0.6% precision)</li>
-                            <li>σ₈ = 0.823 ± 0.005 (0.6% precision)</li>
-                            <li>Ωₘ = 0.315 ± 0.008 (2.5% precision)</li>
-                            <li>α_eff = (1.2 ± 0.3) × 10⁻⁶⁶ (25% precision)</li>
-                        </ul>
-
-                        <h5>Tension Quantification</h5>
-
-                        <p>We quantify tension reduction using the standard metric T = |μ₁ - μ₂|/√(σ₁² + σ₂²):</p>
-
-                        <p><strong>H₀ Tension</strong>:</p>
-                        <ul>
-                            <li>ΛCDM vs SH0ES: T = 4.4σ</li>
-                            <li>Spin-Torsion vs SH0ES: T = 1.4σ</li>
-                            <li><strong>Reduction</strong>: 68% decrease in tension significance</li>
-                        </ul>
-
-                        <p><strong>σ₈ Tension</strong>:</p>
-                        <ul>
-                            <li>ΛCDM vs KiDS: T = 2.5σ</li>
-                            <li>Spin-Torsion vs KiDS: T = 0.8σ</li>
-                            <li><strong>Reduction</strong>: 68% decrease in tension significance</li>
-                        </ul>
-
-                        <p><strong>Combined Tension</strong>: The quadrature sum of all tensions decreases from 5.1σ (ΛCDM) to 1.6σ (spin-torsion), representing a 69% overall reduction.</p>
-
-                        <h4>3.3.4 Systematic Uncertainties and Robustness</h4>
-
-                        <h5>Theoretical Uncertainties</h5>
-
-                        <p>The spin-torsion framework's predictions depend on several theoretical parameters that introduce systematic uncertainties:</p>
-
-                        <p><strong>Barbero-Immirzi Parameter</strong>: γ = 0.274 ± 0.020 (7% uncertainty from LQG calculations)<br>
-                        <strong>Parent Black Hole Properties</strong>: Mass and spin distributions introduce 15% uncertainty in α_eff<br>
-                        <strong>One-Loop Coefficient</strong>: Regularization scheme dependence contributes 20% uncertainty</p>
-
-                        <p><strong>Propagated Uncertainties</strong>:</p>
-                        <ul>
-                            <li>H₀ prediction: ±0.4 km s⁻¹ Mpc⁻¹ (dominated by theoretical uncertainties)</li>
-                            <li>σ₈ prediction: ±0.005 (limited by observational precision)</li>
-                        </ul>
-
-                        <h5>Observational Systematics</h5>
-
-                        <p><strong>Distance Ladder Systematics</strong>: Cepheid calibration uncertainties could affect H₀ measurements by ±0.5 km s⁻¹ Mpc⁻¹, comparable to the spin-torsion correction.</p>
-
-                        <p><strong>Weak Lensing Systematics</strong>: Shape measurement and photometric redshift errors could bias σ₈ measurements by ±0.01, larger than the predicted enhancement.</p>
-
-                        <p><strong>Robustness Assessment</strong>: Even accounting for systematic uncertainties, the spin-torsion framework provides statistically significant improvement over ΛCDM in resolving cosmological tensions.</p>
-
-                        <h4>3.3.5 Implications and Future Prospects</h4>
-
-                        <h5>Theoretical Implications</h5>
-
-                        <p>The successful resolution of cosmological tensions through spin-torsion effects has profound implications for fundamental physics:</p>
-
-                        <p><strong>Quantum Gravity Phenomenology</strong>: This represents the first observational evidence for quantum gravitational effects in cosmology, opening a new window into Planck-scale physics.</p>
-
-                        <p><strong>Black Hole Interior Physics</strong>: Confirmation would validate the torsion-regulated collapse scenario and baby universe production mechanism.</p>
-
-                        <p><strong>Parity Violation in Gravity</strong>: The framework predicts fundamental asymmetries in gravitational interactions, potentially detectable through cosmic birefringence.</p>
-
-                        <h5>Observational Prospects</h5>
-
-                        <p><strong>Near-Term Validation</strong> (2025-2028):</p>
-                        <ul>
-                            <li>DESI BAO measurements will test the modified expansion history</li>
-                            <li>LSST Y1 weak lensing will probe enhanced structure growth</li>
-                            <li>CMB-S4 will search for predicted E-B correlations</li>
-                        </ul>
-
-                        <p><strong>Discovery Potential</strong> (2029-2035):</p>
-                        <ul>
-                            <li>Combined CMB + LSS analysis could achieve 5σ detection</li>
-                            <li>Independent confirmation through multiple observational channels</li>
-                            <li>Precision tests of quantum gravitational predictions</li>
-                        </ul>
-
-                        <p><strong>Falsification Criteria</strong>:</p>
-                        <ul>
-                            <li>No improvement in H₀ tension with DESI/LSST data</li>
-                            <li>Absence of predicted CMB E-B correlations</li>
-                            <li>Inconsistent expansion history measurements</li>
-                        </ul>
-
-                        <p>The spin-torsion framework thus provides not only a potential resolution to current cosmological tensions but also a comprehensive observational program for testing quantum gravitational effects in the cosmos. The framework's success in addressing multiple independent discrepancies through a single physical mechanism represents a significant advance in our understanding of cosmic acceleration and fundamental physics.</p>
                     <hr style="margin: 2rem 0;">
 
                     <section id="enhanced-derivations" class="section">
@@ -1240,10 +967,10 @@
 
                         <h3>6.2 Parameter Constraints and Naturalness</h3>
                         <div class="figure-image">
-                            <img src="public/images/figure6_parameter_naturalness.png" alt="Parameter Naturalness Analysis">
+                            <img src="public/images/figure4_parameter_naturalness.png" alt="Parameter Naturalness Analysis">
                             <div class="figure-caption">
-                                <strong>Figure 6: Parameter Naturalness Analysis</strong><br>
-                                Parameter naturalness analysis showing (A) parent black hole mass distribution, (B) spin parameter distribution, (C) dark energy scale evolution, and (D) fine-tuning comparison across different models. <a href="public/spreadsheets/figure_6_parameter_naturalness_complete_data.xlsx" target="_blank">[Source data]</a> | <a href="interactive-data.html#figure6" target="_blank">[Interactive charts]</a>
+                                <strong>Figure 4: Parameter Naturalness Analysis</strong><br>
+                                Parameter naturalness analysis showing (A) parent black hole mass distribution, (B) spin parameter distribution, (C) dark energy scale evolution, and (D) fine-tuning comparison across different models.
                             </div>
                         </div>
 
@@ -1262,10 +989,10 @@
                         <h2>7. Detection Timeline and Experimental Prospects</h2>
 
                         <div class="figure-image">
-                            <img src="public/images/figure7_observational_timeline.png" alt="Comprehensive Observational Timeline">
+                            <img src="public/images/figure5_observational_timeline.png" alt="Comprehensive Observational Timeline">
                             <div class="figure-caption">
-                                <strong>Figure 7: Comprehensive Observational Timeline</strong><br>
-                                Comprehensive observational timeline showing (A) CMB polarization experiment evolution, (B) galaxy survey progression, (C) combined detection significance, and (D) model discrimination power over time. <a href="public/spreadsheets/figure_7_observational_timeline_complete_data.xlsx" target="_blank">[Source data]</a> | <a href="interactive-data.html#figure7" target="_blank">[Interactive charts]</a>
+                                <strong>Figure 5: Comprehensive Observational Timeline</strong><br>
+                                Comprehensive observational timeline showing (A) CMB polarization experiment evolution, (B) galaxy survey progression, (C) combined detection significance, and (D) model discrimination power over time.
                             </div>
                         </div>
 
@@ -1621,9 +1348,6 @@
         // Add click handlers to all figure images
         document.addEventListener('DOMContentLoaded', function() {
             const figureImages = document.querySelectorAll('.figure-image img');
-            const lightboxCaptionContent = document.getElementById('lightboxCaptionContent');
-            const lightboxCaptionToggle = document.getElementById('lightboxCaptionToggle');
-            const lightboxCaption = document.getElementById('lightboxCaption');
             
             figureImages.forEach(img => {
                 img.addEventListener('click', function() {
@@ -1634,32 +1358,12 @@
                     // Get the caption from the figure
                     const figureCaption = this.parentElement.querySelector('.figure-caption');
                     if (figureCaption) {
-                        lightboxCaptionContent.innerHTML = figureCaption.innerHTML;
+                        lightboxCaption.innerHTML = figureCaption.innerHTML;
                         lightboxCaption.style.display = 'block';
-                        // Reset to collapsed state
-                        lightboxCaption.classList.remove('expanded');
-                        lightboxCaption.classList.add('collapsed');
-                        lightboxCaptionToggle.querySelector('span').className = 'chevron-down';
                     } else {
                         lightboxCaption.style.display = 'none';
                     }
                 });
-            });
-
-            // Toggle caption expand/collapse
-            lightboxCaptionToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const isCollapsed = lightboxCaption.classList.contains('collapsed');
-                
-                if (isCollapsed) {
-                    lightboxCaption.classList.remove('collapsed');
-                    lightboxCaption.classList.add('expanded');
-                    this.querySelector('span').className = 'chevron-up';
-                } else {
-                    lightboxCaption.classList.remove('expanded');
-                    lightboxCaption.classList.add('collapsed');
-                    this.querySelector('span').className = 'chevron-down';
-                }
             });
         });
 

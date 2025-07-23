@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            width: 600px;
+            height: 400px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test Chart</h1>
+    <div class="chart-container">
+        <canvas id="testChart"></canvas>
+    </div>
+
+    <script>
+        console.log('Script starting...');
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            
+            const ctx = document.getElementById('testChart');
+            console.log('Canvas element:', ctx);
+            
+            if (ctx) {
+                console.log('Creating chart...');
+                const chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['January', 'February', 'March', 'April', 'May'],
+                        datasets: [{
+                            label: 'Test Data',
+                            data: [12, 19, 3, 5, 2],
+                            borderColor: 'rgb(75, 192, 192)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            tension: 0.1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false
+                    }
+                });
+                console.log('Chart created:', chart);
+            } else {
+                console.error('Canvas element not found!');
+            }
+        });
+    </script>
+</body>
+</html> 

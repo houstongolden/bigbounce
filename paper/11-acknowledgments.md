@@ -1,0 +1,7 @@
+## Acknowledgments
+
+We thank the Planck, CMB-S4, LiteBIRD, and LSST collaborations for providing the observational foundation for this work. We acknowledge valuable discussions on Loop Quantum Cosmology with the LQG community, on Einstein-Cartan theory with the torsion gravity community, and on black hole cosmology with researchers exploring universe-in-black-hole scenarios. Special recognition goes to the JWST team for the remarkable deep field observations that provide compelling preliminary evidence for cosmic parity violation. 
+
+We particularly acknowledge the foundational contributions of Nikodem Popławski, whose pioneering work on Einstein-Cartan cosmology, torsion-induced bounces, and rotating black hole universes provided essential theoretical groundwork for this synthesis. We thank Simone Mercuri, Laurent Freidel, Djordje Minic, and Tatsu Takeuchi for their fundamental derivations connecting the Barbero-Immirzi parameter to parity-violating interactions in Loop Quantum Gravity. We acknowledge Lior Shamir for his persistent observational documentation of large-scale galaxy spin asymmetries, providing crucial empirical evidence for cosmic parity violation.
+
+We thank the theoretical physics community for developing the mathematical frameworks that make this synthesis possible, and the observational cosmology community for the precision measurements that enable these tests of fundamental physics.
