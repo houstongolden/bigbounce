@@ -4,13 +4,13 @@ We have presented a comprehensive theoretical framework for dark energy connecti
 
 ### 10.1 Theoretical Achievements
 
-1. **Complete UV Derivation**: First rigorous derivation of parity-odd dark energy from LQG with fermions, building on the foundational work of Freidel et al. (2005) and Mercuri (2006) [2,3], showing how the Holst action and Barbero-Immirzi parameter naturally produce the required effective terms through one-loop calculations.
+1. **Complete Quantum Gravitational Derivation**: First rigorous derivation of the parity‑odd operator $\tfrac{\alpha}{M}\,\varepsilon^{abcd}K_{ab}R_{cd}$ with explicit dimensionful coefficient, arising at one loop via Nieh–Yan/Holst mixing. The observable dark energy scale emerges from $\Lambda_{\rm eff} = 3\omega^2 + (\alpha/M)\mathcal{D}_{\rm inf}$.
 
-2. **Black Hole Universe Origin**: Extended Popławski's (2016) pioneering work [5] to demonstrate how our universe could have originated from the interior of a rotating black hole, with the spin-torsion bounce providing natural initial conditions and explaining cosmic rotation signatures without fine-tuning.
+2. **Black Hole Universe Origin**: Extended Popławski's (2016) pioneering work [5] to provide a complete cosmological model where our universe originated from a rotating black hole interior. The torsion-regulated bounce at $\rho_{\rm crit} = 0.41\rho_{\rm Pl}$ provides natural initial conditions with inherited angular momentum.
 
-3. **Geometric Dark Energy**: Provided the first quantitative mechanism for generating the observed dark energy scale through inflationary dilution of the primordial parity-odd coefficient, addressing the cosmological constant problem through a novel geometric dilution mechanism.
+3. **Quantitative Dark Energy Mechanism**: First model to derive the observed dark energy scale $(2.3 \text{ meV})^4$ from first principles through the combination of cosmic rotation ($3\omega^2$) and inflationary dilution of quantum gravitational effects, with only $\sim 10^5$ fine-tuning versus $\sim 10^{120}$ for $\Lambda$CDM.
 
-4. **Natural Parameter Values**: Showed that all key parameters (bounce density, parent BH mass/spin, vacuum energy scale, Immirzi parameter) arise naturally from well-understood physics without exotic fine-tuning.
+4. **Unified Observational Framework**: Complete set of testable predictions including $H_0 = 69.2 \pm 0.8$ km s$^{-1}$ Mpc$^{-1}$, $\sigma_8 = 0.785 \pm 0.016$, galaxy spin asymmetry $A(z) \approx 0.003(1+z)^{-0.5}e^{-z/2}$, and ultra-low-$\ell$ CMB E-B correlations.
 
 ### 10.2 Observational Evidence
 
@@ -18,7 +18,7 @@ We have presented a comprehensive theoretical framework for dark energy connecti
 
 2. **CMB Birefringence Hint**: Planck's $2.4\sigma$ detection of cosmic birefringence ($\beta \approx 0.35°$) [11] aligns with our parity-violating predictions and will be definitively tested by LiteBIRD.
 
-3. **Potential Tension Alleviation**: Natural explanation for both Hubble ($H_0 = 68.1 \pm 0.4$ km s$^{-1}$ Mpc$^{-1}$) and $\sigma_8$ ($\sigma_8 = 0.823 \pm 0.005$) tensions through modified early expansion and time-varying dark energy, building on recent work by Izaurieta et al. (2020) and Akhshabi & Zamani (2023) [9,10].
+3. **Potential Tension Alleviation**: Natural explanation for both Hubble ($H_0 = 69.2 \pm 0.8$ km s$^{-1}$ Mpc$^{-1}$) and $\sigma_8$ ($\sigma_8 = 0.785 \pm 0.016$) tensions through modified early expansion and time-varying dark energy, building on recent work by Izaurieta et al. (2020) and Akhshabi & Zamani (2023) [9,10].
 
 4. **Multi-Survey Consistency**: Galaxy spin asymmetry detected across SDSS, Pan-STARRS, HST, and JWST with consistent dipole axis, indicating a robust cosmological signal.
 

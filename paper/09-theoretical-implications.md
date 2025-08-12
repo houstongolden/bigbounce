@@ -10,6 +10,8 @@ Detection would provide direct constraints on LQC parameters:
 - **Area gap**: $\Delta = 4\sqrt{3}\pi\gamma \pm 10\%$
 - **Critical density**: $\rho_c = 0.41 \rho_{\text{Pl}} \pm 15\%$
 
+In addition, fits that include low‑$\ell$ $EB$ information constrain the renormalized coefficient $\alpha/M$ of the parity‑odd operator and any large‑scale vorticity contribution via $\Lambda_{\rm eff}=\Lambda+3\,\omega^2$.
+
 #### 9.1.2 Black Hole Interior Physics
 Confirmation would validate:
 - **Torsion-regulated collapse**: No singularities in black hole interiors

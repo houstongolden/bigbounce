@@ -1,0 +1,43 @@
+# EB Forecast Configuration
+# CMB E-B cross-correlation forecast parameters
+
+# Birefringence angles to test (degrees)
+beta_grid_deg: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5]
+
+# Sky coverage fraction
+f_sky: 0.4  # CMB-S4 deep survey
+
+# Multipole range
+ell_min: 2
+ell_max: 200
+bin_width: 10
+
+# Optional: map between beta and (alpha/M)
+# If true, will also output constraints on (alpha/M)
+use_alpha_over_M: false
+k_beta: null  # Set if using alpha/M parameterization
+
+# Correlation parameters for joint analysis
+rho_grid: [0.0, 0.3, 0.5]
+
+# Random seed for reproducibility
+random_seed: 42
+
+# Output format
+output_format: 'csv'  # csv or hdf5
+
+# Experiment presets (can override with custom instrument.csv)
+experiment: 'CMB-S4'  # Planck, LiteBIRD, CMB-S4, AliCPT, custom
+
+# Systematics to include in forecast
+include_systematics:
+  beam_uncertainty: true
+  polarization_angle: true
+  gain_fluctuations: true
+  foreground_residuals: true
+
+# Conventions (DO NOT CHANGE)
+conventions:
+  c_omega: -1  # Fixed by Appendix R
+  metric_signature: [-1, 1, 1, 1]
+  levi_civita: 1  # epsilon^{0123} = +1

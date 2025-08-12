@@ -1,0 +1,6 @@
+Model,Observed_Value,Natural_Scale,Fine_Tuning_Score,Geometric_Explanation
+LambdaCDM_rhoLambda_meV4,1,1e120,1e120,false
+Quintessence_Example,1,1e8,1e8,false
+SpinTorsion,1,1e3,1e3,true
+
+

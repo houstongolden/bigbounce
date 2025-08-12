@@ -1,6 +1,12 @@
 ## 7. Detection Timeline and Experimental Prospects
 
 ![Observational Timeline](../public/images/figure7_observational_timeline.png)
+<br/>
+<em>Supplement: EB/Spin combined significance (preview)</em>
+
+![EB/Spin Timeline (Forecast-Style)](../public/images/CMB:Galaxy EB & Spin Significance Over Time (Forecast-Style).png)
+
+Source data: `public/spreadsheets/EB_Spin_Significance_Timeline__Preview_.csv`
 
 *Figure 7: Comprehensive observational timeline showing (A) CMB polarization experiment evolution, (B) galaxy survey progression, (C) combined detection significance, and (D) model discrimination power over time.*
 

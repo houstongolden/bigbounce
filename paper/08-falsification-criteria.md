@@ -3,15 +3,16 @@
 ### 8.1 Specific Falsification Criteria
 
 #### 8.1.1 CMB E-B Correlations
-**Prediction**: $C_\ell^{EB} = (2.0 \pm 0.3) \times 10^{-4} \mu\text{K}^2$ for $\ell = 2$-$4$
+**Prediction**: Low‑$\ell$ excess with peak at $\ell = 2$–$4$ and amplitude $C_\ell^{EB} \approx 2 \times 10^{-4} \mu\text{K}^2$, arising from $(\alpha/M)\mathcal{D}_{\rm inf}$.
 
 **Falsification Criteria**:
-- No detection at $> 2\sigma$ level by CMB-S4 + LiteBIRD
-- Detection of opposite sign correlation
-- Wrong multipole dependence (power-law vs exponential cutoff)
+- No detection at $> 2\sigma$ level by CMB-S4 + LiteBIRD combined
+- Detection of opposite sign correlation (anticorrelation)
+- Wrong multipole dependence: power-law $\propto \ell(\ell+1)$ instead of exponential cutoff $\exp[-(\ell-3)^2/4]$
+- Peak at wrong multipole: $\ell > 10$ or uniform spectrum
 
 #### 8.1.2 Galaxy Spin Asymmetry
-**Prediction**: Dipole axis at $(l \sim 52°, b \sim 68°)$ with amplitude $0.003 \pm 0.001$
+**Prediction**: Dipole axis at $(l \sim 52°, b \sim 68°)$ with amplitude $0.003 \pm 0.001$; combined significance forecast from EB/Spin timeline CSV.
 
 **Falsification Criteria**:
 - No dipole detected in LSST data at $> 3\sigma$

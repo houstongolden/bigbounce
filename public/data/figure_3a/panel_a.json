@@ -1,0 +1,1 @@
+{"updated": "2025-08-11T22:22:51.498398Z", "commit": "ebe8dd9", "data": [{"Model": "Planck", "H0": 67.4, "sigma8": 0.811}, {"Model": "SH0ES", "H0": 73.0, "sigma8": null}, {"Model": "SpinTorsion", "H0": 69.2, "sigma8": 0.785}]}

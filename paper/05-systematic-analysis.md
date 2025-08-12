@@ -1,5 +1,13 @@
 ## 5. Comprehensive Systematic Analysis
 
+This section provides a comprehensive analysis of systematic errors and their mitigation strategies. Observable amplitudes throughout depend on the renormalized loop coefficient $(\alpha/M)$ multiplied by the inflationary dilution factor $\mathcal{D}_{\rm inf}$. 
+
+Combined detection significance accounts for potential correlation between probes:
+
+$$Z_{\rm comb} = \frac{w_1 Z_1 + w_2 Z_2}{\sqrt{w_1^2 + w_2^2 + 2\rho w_1 w_2}}$$
+
+where $Z_i$ are individual probe significances, $w_i$ are weights (default 1), and $\rho$ is the cross-probe correlation coefficient. We show results for $\rho \in \{0, 0.3, 0.5\}$ spanning optimistic to conservative scenarios.
+
 ### 5.1 CMB Systematic Errors and Mitigation
 
 #### 5.1.1 Foreground Contamination

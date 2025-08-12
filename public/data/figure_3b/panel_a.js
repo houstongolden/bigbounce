@@ -1,0 +1,1 @@
+window.__FIG_DATA__=window.__FIG_DATA__||{};window.__FIG_DATA__['figure_3b_panel_a']={"updated": "2025-08-11T22:22:51.519823Z", "commit": "ebe8dd9", "data": [{"z": 0.0, "H_LCDM": 67.4, "H_SpinTorsion": 69.2}, {"z": 0.5, "H_LCDM": 91.0, "H_SpinTorsion": 92.3}, {"z": 1.0, "H_LCDM": 120.2, "H_SpinTorsion": 121.1}]};

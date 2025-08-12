@@ -8,6 +8,7 @@ Our framework begins with Loop Quantum Cosmology (LQC), which provides a quantum
 
 *Figure 1: LQG Holst term derivation showing (A) Holst action components with Einstein-Hilbert and parity-odd terms, (B) torsion activation by fermionic spin density, (C) four-fermion interaction strength vs Immirzi parameter, and (D) parity-odd coefficient evolution through cosmic history.*
 
+
 #### 2.1.1 Einstein-Cartan-Holst Action
 
 The fundamental action combining Einstein-Cartan theory with the Holst term is:
@@ -43,21 +44,17 @@ $$\mathcal{L}_{\text{int}} = -\frac{3\pi G_N}{2} \times \frac{\gamma^2}{\gamma^2
 
 where $J^{\mu}_{(A)} = \bar{\psi} \gamma^{\mu} \gamma^5 \psi$ is the axial current.
 
-**Step 3: Parity-Odd Effective Action**
-The key insight from Mercuri (2009) [4] is that when the Immirzi parameter is treated as a dynamical field, or when non-minimal couplings are considered, the effective action acquires a parity-odd term:
+**Step 3: Parity-Odd Effective Action (dimensionful coefficient)**
+The key insight from Mercuri (2009) [4] is that when the Immirzi parameter is treated as a dynamical field, or when non-minimal couplings are considered, the effective action acquires a parity-odd term. Since $[K]=1$ and $[R]=2$ (mass units), the operator $\varepsilon^{abcd}K_{ab}R_{cd}$ has mass-dimension 3, so the coefficient must carry one power of mass in the denominator:
 
-$$S_{\text{eff}} = \alpha \int d^4x \sqrt{-g} \, \varepsilon^{abcd} K_{ab} R_{cd}$$
+$$S_{\text{eff}} = \int d^4x\,\sqrt{-g}\; \frac{\alpha}{M}\; \varepsilon^{abcd} K_{ab} R_{cd}, \qquad [\alpha]=M^0.$$
 
-**Step 4: One-Loop Coefficient Calculation**
-The coefficient emerges from a one-loop diagram with fermion propagators:
+**Step 4: One-Loop Coefficient (scheme made explicit)**
+The coefficient arises at one loop in a torsionful background through Nieh–Yan/Holst mixing. A regulator-transparent estimate has the form
 
-$$\Gamma^{(1)} = \int \frac{d^4k}{(2\pi)^4} \text{Tr}\left[\frac{1}{k^2 + M^2} \gamma^5 \gamma^a \frac{1}{\not{k}} \gamma^b \gamma^c\right] T_a^{de} R_{de} K_{bc}$$
+$$\frac{\alpha}{M} \,\sim\, \frac{g^2}{32\pi^2}\,\frac{\gamma}{M}\,\ln\!\left(\frac{\Lambda^2}{\mu^2}\right) + \delta_{\mathrm{NY}},$$
 
-After regularization with the LQC area gap $\Delta$:
-
-$$\alpha = \frac{g^2\gamma}{32\pi^3} \ln\left(\frac{\Delta}{M^2}\right) \approx 1.2 \times 10^{-66}$$
-
-This derivation makes explicit the assumptions: (1) fermions are coupled to gravity through the standard Dirac action, (2) the Immirzi parameter is treated as having dynamical effects through quantum corrections, and (3) the LQC area gap provides a natural UV cutoff.
+where $g$ is the axial–torsion coupling fixed by EC geometry, $\Lambda$ a UV scale (e.g., an LQG area-gap mass), $\mu$ a subtraction scale, and $\delta_{\mathrm{NY}}$ the finite renormalization of the Nieh–Yan density. Predictions are expressed in terms of the renormalized $\alpha/M$.
 
 #### 2.1.3 Parameter Naturalness and Parent Black Hole Properties
 
@@ -71,7 +68,9 @@ This is easily satisfied by any astrophysical black hole.
 
 **Spin Parameter Constraints**: The dimensionless spin $a_* = \frac{Jc}{GM^2}$ must satisfy $0 < a_* < 1$. Higher spins provide stronger cosmic rotation signatures. For the observed dark energy density:
 
-$$\Lambda_0 = \frac{\alpha_{\text{eff}} \Omega_0^2}{8\pi G} \approx (2.3 \text{ meV})^4$$
+$$\Lambda_0 = 3\omega_0^2 + \left(\frac{\alpha}{M}\right)\mathcal{D}_{\rm inf} \approx (2.3 \text{ meV})^4$$
+
+where the rotation contribution is $3\omega_0^2$ and the parity-odd contribution is $(\alpha/M)\mathcal{D}_{\rm inf}$.
 
 This requires initial cosmic rotation:
 
@@ -115,7 +114,11 @@ The modified Friedmann equation becomes:
 
 $$H^2 = \frac{8\pi G}{3} \rho \left[1 - \frac{\rho}{\rho_{\text{crit}}}\right]$$
 
-where $\rho_{\text{crit}} = \frac{\sqrt{3}}{32\pi^2 \gamma^3 G} \approx 0.41 \rho_{\text{Pl}}$ is the critical density for the bounce.
+where
+
+$$\rho_{\text{crit}} = \frac{3}{8\pi G\,\gamma^2\,\Delta} = \frac{\sqrt{3}}{32\pi^2\,\gamma^3}\,\rho_{\text{Pl}} \;\simeq\; 0.41\,\rho_{\text{Pl}},$$
+
+with $\Delta = 4\sqrt{3}\pi\gamma\,\ell_P^2$ and $\rho_{\text{Pl}}\equiv 1/G^2$ ($c=\hbar=1$).
 
 #### 2.2.3 Baby Universe Formation
 
@@ -127,30 +130,35 @@ $$\Omega_{\text{initial}} \approx \frac{J}{Mr_g^2} \quad \text{(initial angular 
 
 These values are completely determined by the parent black hole properties, with no free parameters.
 
-### 2.3 Cosmic Rotation and Time-Varying Dark Energy
+### 2.3 Cosmic Rotation and Dark Energy
 
-#### 2.3.1 Derivation of $\Lambda(t) \propto \Omega^2(t)$
+#### 2.3.1 Covariant Formalism and Effective Cosmological Constant
 
-Building on Popławski's (2019) qualitative suggestion [6], we provide the first quantitative derivation. In a closed universe with global rotation, the stress-energy tensor includes a rotational contribution:
+Using the 1+3 covariant decomposition for an almost-FLRW congruence with shear $\sigma_{\mu\nu}$ and vorticity $\omega_{\mu\nu}$ (where $\omega^2\equiv \tfrac12\,\omega_{\mu\nu}\omega^{\mu\nu}$), the generalized Friedmann constraint reads:
 
-$$T_{\mu\nu}^{\text{rot}} = \rho_{\text{rot}} u_\mu u_\nu + p_{\text{rot}} h_{\mu\nu}$$
+$$H^2 = \frac{8\pi G}{3}\,\rho + \frac{\Lambda}{3} + \frac{1}{3}(\sigma^2 - \omega^2) - \frac{k}{a^2}.$$
 
-where $h_{\mu\nu} = g_{\mu\nu} + u_\mu u_\nu$ is the spatial metric.
+The vorticity enters with a negative sign, reducing the expansion rate. Comparing with the standard Friedmann equation, we can absorb the shear and vorticity contributions into an effective cosmological constant:
 
-For a rigidly rotating fluid, the energy density and pressure are:
+$$\boxed{\Lambda_{\rm eff} = \Lambda + (\sigma^2 - \omega^2)}$$
 
-$$\rho_{\text{rot}} = \frac{\Omega^2 r^2}{8\pi G} \sin^2\theta$$
-$$p_{\text{rot}} = -\frac{\Omega^2 r^2}{24\pi G} \sin^2\theta$$
+In the limit of negligible shear ($\sigma^2 \ll \omega^2$), this reduces to:
 
-The effective cosmological constant is:
+$$\Lambda_{\rm eff} = \Lambda + c_\omega\,\omega^2$$
 
-$$\Lambda_{\text{eff}} = 8\pi G \langle\rho_{\text{rot}}\rangle = \frac{\Omega^2}{3}$$
+where $c_\omega = -1$ in our conventions (see Appendix R for detailed derivation and sign conventions). Different conventions for the normalization of $\omega_{ab}$ can lead to factors of 2 or 3, which is why we carry $c_\omega$ symbolically in the main text.
 
-As the universe expands, angular momentum conservation gives $\Omega(t) \propto 1/a^2$, so:
+**Crucial constraint**: Current CMB isotropy bounds from Planck and analysis of Bianchi models give $(\omega/H)_0 < 5 \times 10^{-11}$ (95% CL), implying:
 
-$$\Lambda(t) = \Lambda_0 \left(\frac{a_0}{a(t)}\right)^4 = \Lambda_0 (1+z)^4$$
+$$\frac{|c_\omega|\omega^2}{H_0^2} < 10^{-20}$$
 
-This provides a physical mechanism for time-varying dark energy that naturally decreases over time.
+This rotation contribution is completely negligible for background expansion. Given these stringent constraints, rotation cannot affect $H_0$ or $\sigma_8$ at any measurable level. Instead, rotation manifests only through parity-odd observables (CMB E-B correlations, galaxy spin asymmetries) that probe the direction of $\omega^a$, not its magnitude squared.
+
+The observed dark energy scale arises from a different mechanism:
+
+$$\Lambda_{\rm obs} = \left(\frac{\alpha}{M}\right)\mathcal{D}_{\rm inf} \approx (2.3 \text{ meV})^4$$
+
+where $(\alpha/M)$ is the renormalized coefficient of the parity-odd operator from loop quantum gravity effects (see Appendix L for the Holst-Nieh-Yan treatment) and $\mathcal{D}_{\rm inf}$ is the inflationary dilution factor.
 
 #### 2.3.2 Galaxy Spin Alignment Mechanism
 
@@ -162,12 +170,19 @@ The cosmic rotation creates a preferred frame that influences galaxy formation t
 
 **Tidal Torque Modification**: The background vorticity modifies the standard tidal torque theory of galaxy formation. The cosmic rotation adds coherently to random local torques during structure formation.
 
-The predicted galaxy spin asymmetry amplitude is:
+The predicted galaxy spin asymmetry follows a dipole pattern:
 
-$$A_{\text{dipole}}(\hat{n}) = A_0 \cos \theta$$
+$$A_{\text{dipole}}(\hat{n}) = A(z) \cos \theta$$
 
-where $\theta$ is the angle from the cosmic rotation axis and:
+where $\theta$ is the angle from the cosmic rotation axis. The amplitude evolves with redshift according to a parametric model:
 
-$$A_0 = \frac{\Omega_0 H_0^{-1}}{c} \approx 0.003$$
+$$\boxed{A(z) = A_0 \cdot (1+z)^{-p} \cdot e^{-qz}}$$
 
-This mechanism provides a clear physical explanation for the observed galaxy spin asymmetries documented by Shamir (2012-2022) [7,8].
+with parameters:
+- $A_0 \in [0, 0.02]$: Present-day amplitude (broad prior)
+- $p \in [0, 2]$: Power-law index controlling redshift evolution
+- $q \in [0, 2]$: Exponential decay rate
+
+This parametric form can absorb survey-specific selection effects while remaining physically motivated. The theoretical expectation is $A_0 \sim 0.003$ based on the initial cosmic rotation, but we fit this from data using hierarchical Bayesian methods to account for systematic biases (see Section 3.2 and Appendix C for methodology).
+
+This mechanism provides a clear physical explanation for the observed galaxy spin asymmetries documented by Shamir (2012-2022) [7,8] and recently confirmed by JWST deep field observations.

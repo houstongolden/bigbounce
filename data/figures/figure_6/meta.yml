@@ -1,0 +1,22 @@
+figure_id: 6
+title: Parameter naturalness
+panels:
+  - id: panel_c
+    file: panel_c.csv
+    schema:
+      columns:
+        - {name: z, type: number}
+        - {name: Omega_omega, type: number, desc: "rotation-energy fraction"}
+  - id: panel_d
+    file: panel_d.csv
+    schema:
+      columns:
+        - {name: Model, type: string}
+        - {name: Observed_Value, type: number}
+        - {name: Natural_Scale, type: number}
+        - {name: Fine_Tuning_Score, type: number}
+        - {name: Geometric_Explanation, type: boolean}
+provenance:
+  source: "Naturalness comparison"
+
+

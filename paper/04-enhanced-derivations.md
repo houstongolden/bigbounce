@@ -1,6 +1,18 @@
 ## 4. Enhanced Theoretical Derivations
 
-### 4.1 Rigorous LQG Parity-Odd Term Derivation
+### 4.0 Supplementary Methods (Data & Forecasts)
+
+1. **EB/Spin combined significance (Section 7):** We compute the combined forecast significance as
+
+$$\sigma_{\rm comb}=\sqrt{\sigma_{\rm CMB}^2+\sigma_{\rm Gal}^2},$$
+
+with yearly CMB and galaxy‑spin bands taken from the CSV `public/spreadsheets/EB_Spin_Significance_Timeline__Preview_.csv`. The plotted forecast‑style image is `public/images/CMB:Galaxy EB & Spin Significance Over Time (Forecast-Style).png`.
+
+2. **Rotation bounds (Section 3.3):** Given stringent isotropy constraints $(\omega/H)_0 < 5 \times 10^{-11}$, rotation contributes negligibly to background expansion ($<10^{-20}$ of $\Lambda$). The parity-violating term $\propto \varepsilon^{\mu\nu\rho\sigma} K_{\mu\nu}{}^{ab} R_{\rho\sigma ab}$ affects only odd-parity observables like galaxy spins and CMB E-B correlations, not $H_0$ or $\sigma_8$. Earlier "toy rotation" models violating these bounds have been removed.
+
+3. **Amplitude normalization:** Observable amplitudes in Sections 2–3 scale with the renormalized loop coefficient $(\alpha/M)$ multiplied by geometric/background factors accumulated through inflation and late‑time expansion. This replaces earlier wording that suggested a time‑varying coupling.
+
+### 4.1 Rigorous LQG Parity-Odd Term Derivation (units and scheme clarified)
 
 We provide a complete derivation of the parity-odd effective action from first principles in Loop Quantum Gravity, building on the foundational work of Freidel et al. (2005) and Mercuri (2006) [2,3].
 
@@ -10,9 +22,11 @@ The parity-odd coefficient arises from a one-loop diagram with fermion propagato
 
 $$\Gamma^{(1)} = \int \frac{d^4k}{(2\pi)^4} \text{Tr}\left[\frac{1}{k^2 + M^2} \gamma^5 \gamma^a \frac{1}{\not{k}} \gamma^b \gamma^c\right] T_a^{de} R_{de} K_{bc}$$
 
-After regularization with the LQC area gap $\Delta$:
+Dimensional analysis requires the parity-odd operator to appear with a coefficient $\alpha/M$ (mass dimension $-1$), not a dimensionless $\alpha$. A regulator-transparent one-loop estimate in a torsionful background (with Nieh–Yan/Holst mixing) is
 
-$$\alpha = \frac{g^2\gamma}{32\pi^3} \ln\left(\frac{\Delta}{M^2}\right) \approx 1.2 \times 10^{-66}$$
+$$\frac{\alpha}{M} \;\sim\; \frac{g^2}{32\pi^2}\,\frac{\gamma}{M}\,\ln\!\left(\frac{\Lambda^2}{\mu^2}\right) + \delta_{\mathrm{NY}},$$
+
+where $\Lambda$ is a UV scale (e.g., area-gap mass), $\mu$ the subtraction scale, and $\delta_{\mathrm{NY}}$ encodes finite renormalization of the Nieh–Yan density.
 
 #### 4.1.2 Renormalization Group Flow
 

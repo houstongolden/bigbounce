@@ -1,0 +1,17 @@
+figure_id: 7
+title: EB & spin detection timeline
+panels:
+  - id: panel_c
+    file: panel_c.csv
+    schema:
+      columns:
+        - {name: Year, type: integer}
+        - {name: CMB_Significance_sigma, type: number}
+        - {name: Galaxy_Significance_sigma, type: number}
+        - {name: Combined_Significance_sigma, type: number}
+    checks:
+      - {type: formula_combined_sigma, cmb: CMB_Significance_sigma, gal: Galaxy_Significance_sigma, combined: Combined_Significance_sigma}
+provenance:
+  source: "Forecasts; combined = sqrt(cmb^2 + gal^2)"
+
+

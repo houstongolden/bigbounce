@@ -1,0 +1,18 @@
+figure_id: 2
+title: Galaxy spin asymmetry vs. survey
+panels:
+  - id: panel_a
+    file: panel_a.csv
+    schema:
+      columns:
+        - {name: Survey, type: string}
+        - {name: z_mean, type: number}
+        - {name: N_gal, type: integer}
+        - {name: Asymmetry_pred, type: number, units: fraction, desc: "A(z) = 0.003*(1+z)^-0.5*exp(-z/2)"}
+        - {name: Asymmetry_obs, type: number, optional: true}
+    checks:
+      - {type: range, column: Asymmetry_pred, min: -0.05, max: 0.05}
+provenance:
+  source: "Spin–torsion model v1"
+
+
