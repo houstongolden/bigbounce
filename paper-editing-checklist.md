@@ -179,7 +179,7 @@ Use in Discussion: "The vorticity contribution to the effective cosmological con
   ```
   Houston Golden
   Independent Researcher
-  houston@bamf.ai
+  houston@bamf.com
   ```
 - If you don't have institutional affiliation, use: "Independent Researcher"
 
@@ -272,7 +272,7 @@ work are publicly available from the cited surveys (JWST, Planck, SDSS).
 ```
 Houston Golden
 Independent Researcher
-Email: houston@bamf.ai
+Email: houston@bamf.com
 ORCID: [if applicable]
 ```
 

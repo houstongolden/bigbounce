@@ -1,7 +1,7 @@
 # Geometric Dark Energy from Spin-Torsion Cosmology: A Comprehensive Framework with Observational Validation
 
 **Author:** Houston Golden
-**Email:** houston@bamf.ai
+**Email:** houston@bamf.com
 **Affiliation:** Independent Researcher
 **Date:** November 10, 2025
 
@@ -83,14 +83,14 @@ The framework makes specific, falsifiable predictions accessible to current and 
 
 ### 1.6 Paper Organization
 
-This paper is organized as follows: Section 2 presents the theoretical framework connecting LQG, Einstein-Cartan theory, and cosmology. Section 3 details observational predictions and current evidence. Sections 4-8 provide enhanced derivations, systematic analyses, model comparisons, detection timelines, and falsification criteria. Section 9 explores theoretical implications, followed by conclusions in Section 10.
+This paper is organized as follows: Section 2 presents the theoretical framework (including enhanced derivations) connecting LQG, Einstein-Cartan theory, and cosmology. Section 3 details observational predictions, systematic analyses, and the detection timeline. Section 4 provides model comparison and falsification criteria. Section 5 offers discussion (implications and limitations), followed by conclusions in Section 6.
 
 **Supplementary Materials**: Additional technical details are provided in the accompanying paper sections:
 - Related Work & Positioning (Section 1.1)
 - Assumptions & Validity Regime (Section 1.2)  
-- Data & Methods for galaxy spins and CMB analysis (Sections 4-5)
-- Joint likelihood methodology (Section 6)
-- Cosmological fits and systematics (Sections 7-8)
+- Data & Methods for galaxy spins and CMB analysis (Section 3)
+- Joint likelihood methodology (Section 4)
+- Cosmological fits and systematics (Section 3)
 - Complete parameter tables and notation conventions
 - Technical appendices (R, L, J, C) with detailed derivations
 
@@ -272,9 +272,57 @@ $$A_0 = \frac{\Omega_0 H_0^{-1}}{c} \approx 0.003$$
 
 This mechanism provides a clear physical explanation for the observed galaxy spin asymmetries documented by Shamir (2012-2022) [7,8].
 
+### 2.4 Enhanced Theoretical Derivations
+
+#### 2.4.1 Rigorous LQG Parity-Odd Term Derivation
+
+We provide a complete derivation of the parity-odd effective action from first principles in Loop Quantum Gravity, building on the foundational work of Freidel et al. (2005) and Mercuri (2006) [2,3].
+
+##### 2.4.1.1 One-Loop Calculation
+
+The parity-odd coefficient arises from a one-loop diagram with fermion propagators:
+
+$$\Gamma^{(1)} = \int \frac{d^4k}{(2\pi)^4} \text{Tr}\left[\frac{1}{k^2 + M^2} \gamma^5 \gamma^a \frac{1}{\not{k}} \gamma^b \gamma^c\right] T_a^{de} R_{de} K_{bc}$$
+
+After regularization with the LQC area gap $\Delta$:
+
+$$\alpha = \frac{g^2\gamma}{32\pi^3} \ln\left(\frac{\Delta}{M^2}\right) \approx 1.2 \times 10^{-66}$$
+
+##### 2.4.1.2 Renormalization Group Flow
+
+The coefficient runs with energy scale according to:
+
+$$\frac{d\alpha}{d \ln \mu} = \frac{g^2}{16\pi^2} \left[3C_2(G) - \frac{4}{3}T(R)N_f\right]$$
+
+where $C_2(G)$ and $T(R)$ are group theory factors, and $N_f$ is the number of fermion flavors.
+
+##### 2.4.1.3 Non-Renormalization Theorem
+
+The parity-odd term is protected by a non-renormalization theorem: higher-loop corrections vanish due to the topological nature of the Nieh-Yan invariant, ensuring the coefficient remains finite and calculable.
+
+#### 2.4.2 Vacuum Energy from Fermion Condensates
+
+##### 2.4.2.1 Torsion-Induced Condensation
+
+The four-fermion interaction can lead to fermion condensation via a BCS-like mechanism:
+
+$$\langle\bar{\psi}\psi\rangle = -\frac{\Lambda^3}{2\pi^2} \int_0^{\Lambda/\mu} dx \, x^2 \frac{\tanh(E(x)/(2T))}{E(x)/\mu}$$
+
+where $E(x)$ is the quasiparticle energy and $\mu$ is the chemical potential.
+
+##### 2.4.2.2 QCD Phase Transition Enhancement
+
+During the QCD phase transition at $T \sim 150$ MeV, torsion enhances quark condensation:
+
+$$\langle\bar{q}q\rangle_{\text{torsion}} = \langle\bar{q}q\rangle_{\text{QCD}} \left[1 + \frac{\gamma^2}{\gamma^2+1} \times \frac{\rho}{\rho_{\text{QCD}}}\right]$$
+
+This contributes a small positive vacuum energy:
+
+$$\rho_{\text{vac}} \approx \frac{\alpha_s}{\pi} \times \frac{\langle\bar{q}q\rangle^2}{f_\pi^2} \approx 10^{-29} \text{ GeV}^4$$
+
 ---
 
-## 3. Observational Predictions and Evidence
+## 3. Observational Predictions and Systematic Analysis
 
 ### 3.1 CMB E-B Cross-Correlations from Cosmic Birefringence
 
@@ -608,61 +656,13 @@ The spin-torsion framework thus provides not only a potential resolution to curr
 
 ---
 
-## 4. Enhanced Theoretical Derivations
 
-### 4.1 Rigorous LQG Parity-Odd Term Derivation
 
-We provide a complete derivation of the parity-odd effective action from first principles in Loop Quantum Gravity, building on the foundational work of Freidel et al. (2005) and Mercuri (2006) [2,3].
+### 3.4 Comprehensive Systematic Analysis
 
-#### 4.1.1 One-Loop Calculation
+#### 3.4.1 CMB Systematic Errors and Mitigation
 
-The parity-odd coefficient arises from a one-loop diagram with fermion propagators:
-
-$$\Gamma^{(1)} = \int \frac{d^4k}{(2\pi)^4} \text{Tr}\left[\frac{1}{k^2 + M^2} \gamma^5 \gamma^a \frac{1}{\not{k}} \gamma^b \gamma^c\right] T_a^{de} R_{de} K_{bc}$$
-
-After regularization with the LQC area gap $\Delta$:
-
-$$\alpha = \frac{g^2\gamma}{32\pi^3} \ln\left(\frac{\Delta}{M^2}\right) \approx 1.2 \times 10^{-66}$$
-
-#### 4.1.2 Renormalization Group Flow
-
-The coefficient runs with energy scale according to:
-
-$$\frac{d\alpha}{d \ln \mu} = \frac{g^2}{16\pi^2} \left[3C_2(G) - \frac{4}{3}T(R)N_f\right]$$
-
-where $C_2(G)$ and $T(R)$ are group theory factors, and $N_f$ is the number of fermion flavors.
-
-#### 4.1.3 Non-Renormalization Theorem
-
-The parity-odd term is protected by a non-renormalization theorem: higher-loop corrections vanish due to the topological nature of the Nieh-Yan invariant, ensuring the coefficient remains finite and calculable.
-
-### 4.2 Vacuum Energy from Fermion Condensates
-
-#### 4.2.1 Torsion-Induced Condensation
-
-The four-fermion interaction can lead to fermion condensation via a BCS-like mechanism:
-
-$$\langle\bar{\psi}\psi\rangle = -\frac{\Lambda^3}{2\pi^2} \int_0^{\Lambda/\mu} dx \, x^2 \frac{\tanh(E(x)/(2T))}{E(x)/\mu}$$
-
-where $E(x)$ is the quasiparticle energy and $\mu$ is the chemical potential.
-
-#### 4.2.2 QCD Phase Transition Enhancement
-
-During the QCD phase transition at $T \sim 150$ MeV, torsion enhances quark condensation:
-
-$$\langle\bar{q}q\rangle_{\text{torsion}} = \langle\bar{q}q\rangle_{\text{QCD}} \left[1 + \frac{\gamma^2}{\gamma^2+1} \times \frac{\rho}{\rho_{\text{QCD}}}\right]$$
-
-This contributes a small positive vacuum energy:
-
-$$\rho_{\text{vac}} \approx \frac{\alpha_s}{\pi} \times \frac{\langle\bar{q}q\rangle^2}{f_\pi^2} \approx 10^{-29} \text{ GeV}^4$$
-
----
-
-## 5. Comprehensive Systematic Analysis
-
-### 5.1 CMB Systematic Errors and Mitigation
-
-#### 5.1.1 Foreground Contamination
+##### 3.4.1.1 Foreground Contamination
 
 Galactic foregrounds can mimic E-B correlations through:
 
@@ -676,7 +676,7 @@ where $\mathbf{s}$ is the observed signal, $\mathbf{A}$ is the mixing matrix, $\
 
 **Residual Error**: $< 5 \times 10^{-5} \mu\text{K}^2$ after component separation
 
-#### 5.1.2 Instrumental Systematics
+##### 3.4.1.2 Instrumental Systematics
 
 Key effects include:
 
@@ -691,9 +691,9 @@ Key effects include:
 
 **Residual Error**: $< 2 \times 10^{-5} \mu\text{K}^2$ after mitigation
 
-### 5.2 Galaxy Survey Systematic Errors
+#### 3.4.2 Galaxy Survey Systematic Errors
 
-#### 5.2.1 Shape Measurement Systematics
+##### 3.4.2.1 Shape Measurement Systematics
 
 **PSF Modeling**: Point spread function variations across the field
 **Shear Calibration**: Multiplicative and additive biases in shape measurement
@@ -706,7 +706,7 @@ Key effects include:
 
 **Residual Error**: $< 0.0004$ after shape calibration
 
-#### 5.2.2 Photometric Redshift Errors
+##### 3.4.2.2 Photometric Redshift Errors
 
 Photo-z errors scatter galaxies between redshift bins with $\sigma_z = 0.03(1+z)$ for LSST.
 
@@ -717,7 +717,7 @@ Photo-z errors scatter galaxies between redshift bins with $\sigma_z = 0.03(1+z)
 
 **Residual Error**: $< 0.0002$ after photo-z calibration
 
-### 5.3 Combined Error Budget and Detection Significance
+#### 3.4.3 Combined Error Budget and Detection Significance
 
 | Source | CMB E-B [$\mu\text{K}^2$] | Galaxy Spins |
 |--------|---------------------------|--------------|
@@ -736,30 +736,73 @@ Photo-z errors scatter galaxies between redshift bins with $\sigma_z = 0.03(1+z)
 - **Galaxy Spins**: $4.3\sigma$ (individual)
 - **Combined**: $4.6\sigma$ (joint analysis)
 
+### 3.5 Detection Timeline and Experimental Prospects
+
+![Observational Timeline](public/images/figure7_observational_timeline.png)
+
+*Figure 7: Comprehensive observational timeline showing (A) CMB polarization experiment evolution, (B) galaxy survey progression, (C) combined detection significance, and (D) model discrimination power over time.*
+
+#### 3.5.1 Near-Term Prospects (2024-2028)
+
+##### 3.5.1.1 CMB Experiments
+- **Simons Observatory**: Full operations by 2026, $\sigma(C_\ell^{EB}) \approx 2 \times 10^{-4} \mu\text{K}^2$
+- **CMB-S4**: Construction begins 2027, first data 2028
+
+##### 3.5.1.2 Galaxy Surveys
+- **LSST Y1**: $5 \times 10^8$ galaxies by 2025
+- **LSST Y3**: $1 \times 10^9$ galaxies by 2027
+
+**Combined Significance**: $3.7\sigma$ by 2028
+
+#### 3.5.2 Discovery Era (2029-2034)
+
+##### 3.5.2.1 Next-Generation CMB
+- **LiteBIRD**: Launch 2030, $\sigma(C_\ell^{EB}) \approx 8 \times 10^{-5} \mu\text{K}^2$
+- **CMB-S4**: Full operations 2032, ultimate sensitivity
+
+##### 3.5.2.2 LSST Maturity
+- **LSST Y5**: $2 \times 10^9$ galaxies, $3.2\sigma$ galaxy spin detection
+- **LSST Y10**: $4 \times 10^9$ galaxies, $4.3\sigma$ galaxy spin detection
+
+**Combined Significance**: $5.9\sigma$ by 2034 (potential discovery)
+
+#### 3.5.3 Key Milestones
+
+| Year | CMB E-B ($\sigma$) | Galaxy Spins ($\sigma$) | Combined ($\sigma$) | Milestone |
+|------|-------------------|------------------------|-------------------|-----------|
+| 2024 | $1.2$ | $0.8$ | $1.4$ | Planck Legacy |
+| 2026 | $1.8$ | $1.5$ | $2.3$ | SO + DESI Y3 |
+| 2028 | $2.8$ | $2.4$ | $3.7$ | CMB-S4 Start |
+| 2030 | $3.2$ | $3.2$ | $4.5$ | LiteBIRD + LSST Y5 |
+| 2032 | $3.5$ | $3.7$ | $5.1$ | Full Operations |
+| 2034 | $4.0$ | $4.3$ | $5.9$ | LSST Y10 |
+
+**Key Result**: Potential $5\sigma$ discovery by 2032, with strong evidence ($> 5.5\sigma$) by 2034.
+
 ---
 
-## 6. Model Comparison and Degeneracy Breaking
+## 4. Model Comparison and Falsification
 
-### 6.1 Comparison with Alternative Parity-Violating Models
+### 4.1 Comparison with Alternative Parity-Violating Models
 
 Other models can also predict non-zero E-B correlations, so we must clearly distinguish our predictions:
 
-#### 6.1.1 Axion Cosmic Birefringence
+#### 4.1.1 Axion Cosmic Birefringence
 
 **Prediction**: Scale-invariant E-B spectrum: $C_\ell^{EB} \propto \ell(\ell+1)$
 **Our Model**: Concentrated at low-$\ell$: $C_\ell^{EB} \propto \exp[-(ℓ-3)^2/4]$
 
-#### 6.1.2 Chern-Simons Gravity
+#### 4.1.2 Chern-Simons Gravity
 
 **Prediction**: Peaks at intermediate $\ell \sim 100$-$1000$
 **Our Model**: Maximum at $\ell = 2$-$4$
 
-#### 6.1.3 Chiral Inflation
+#### 4.1.3 Chiral Inflation
 
 **Prediction**: Broad spectrum extending to high $\ell$
 **Our Model**: Exponential cutoff above $\ell \sim 10$
 
-### 6.2 Parameter Constraints and Naturalness
+### 4.2 Parameter Constraints and Naturalness
 
 ![Parameter Naturalness](public/images/figure6_parameter_naturalness.png)
 
@@ -781,230 +824,161 @@ The spin-torsion model requires only $\sim 5$ orders of magnitude fine-tuning co
 
 This represents a dramatic improvement in theoretical naturalness.
 
----
+### 4.3 Falsification Criteria and Null Tests
 
-## 7. Detection Timeline and Experimental Prospects
+#### 4.3.1 Specific Falsification Criteria
 
-![Observational Timeline](public/images/figure7_observational_timeline.png)
+##### 4.3.1.1 CMB E-B Correlations
+Prediction: $C_\ell^{EB} = (2.0 \pm 0.3) \times 10^{-4} \mu\text{K}^2$ for $\ell = 2$–$4$
 
-*Figure 7: Comprehensive observational timeline showing (A) CMB polarization experiment evolution, (B) galaxy survey progression, (C) combined detection significance, and (D) model discrimination power over time.*
-
-### 7.1 Near-Term Prospects (2024-2028)
-
-#### 7.1.1 CMB Experiments
-- **Simons Observatory**: Full operations by 2026, $\sigma(C_\ell^{EB}) \approx 2 \times 10^{-4} \mu\text{K}^2$
-- **CMB-S4**: Construction begins 2027, first data 2028
-
-#### 7.1.2 Galaxy Surveys
-- **LSST Y1**: $5 \times 10^8$ galaxies by 2025
-- **LSST Y3**: $1 \times 10^9$ galaxies by 2027
-
-**Combined Significance**: $3.7\sigma$ by 2028
-
-### 7.2 Discovery Era (2029-2034)
-
-#### 7.2.1 Next-Generation CMB
-- **LiteBIRD**: Launch 2030, $\sigma(C_\ell^{EB}) \approx 8 \times 10^{-5} \mu\text{K}^2$
-- **CMB-S4**: Full operations 2032, ultimate sensitivity
-
-#### 7.2.2 LSST Maturity
-- **LSST Y5**: $2 \times 10^9$ galaxies, $3.2\sigma$ galaxy spin detection
-- **LSST Y10**: $4 \times 10^9$ galaxies, $4.3\sigma$ galaxy spin detection
-
-**Combined Significance**: $5.9\sigma$ by 2034 (potential discovery)
-
-### 7.3 Key Milestones
-
-| Year | CMB E-B ($\sigma$) | Galaxy Spins ($\sigma$) | Combined ($\sigma$) | Milestone |
-|------|-------------------|------------------------|-------------------|-----------|
-| 2024 | $1.2$ | $0.8$ | $1.4$ | Planck Legacy |
-| 2026 | $1.8$ | $1.5$ | $2.3$ | SO + DESI Y3 |
-| 2028 | $2.8$ | $2.4$ | $3.7$ | CMB-S4 Start |
-| 2030 | $3.2$ | $3.2$ | $4.5$ | LiteBIRD + LSST Y5 |
-| 2032 | $3.5$ | $3.7$ | $5.1$ | Full Operations |
-| 2034 | $4.0$ | $4.3$ | $5.9$ | LSST Y10 |
-
-**Key Result**: Potential $5\sigma$ discovery by 2032, with strong evidence ($> 5.5\sigma$) by 2034.
-
----
-
-## 8. Falsification Criteria and Null Tests
-
-### 8.1 Specific Falsification Criteria
-
-#### 8.1.1 CMB E-B Correlations
-**Prediction**: $C_\ell^{EB} = (2.0 \pm 0.3) \times 10^{-4} \mu\text{K}^2$ for $\ell = 2$-$4$
-
-**Falsification Criteria**:
+Falsification Criteria:
 - No detection at $> 2\sigma$ level by CMB-S4 + LiteBIRD
 - Detection of opposite sign correlation
 - Wrong multipole dependence (power-law vs exponential cutoff)
 
-#### 8.1.2 Galaxy Spin Asymmetry
-**Prediction**: Dipole axis at $(l \sim 52°, b \sim 68°)$ with amplitude $0.003 \pm 0.001$
+##### 4.3.1.2 Galaxy Spin Asymmetry
+Prediction: Dipole axis at $(l \sim 52°, b \sim 68°)$ with amplitude $0.003 \pm 0.001$
 
-**Falsification Criteria**:
+Falsification Criteria:
 - No dipole detected in LSST data at $> 3\sigma$
 - Dipole axis inconsistent with CMB anomalies
 - Wrong redshift evolution (constant vs decreasing with time)
 
-#### 8.1.3 Cosmic Rotation Signatures
-**Prediction**: Bulk flows perpendicular to spin axis, correlated CMB and LSS anomalies
+##### 4.3.1.3 Cosmic Rotation Signatures
+Prediction: Bulk flows perpendicular to spin axis, correlated CMB and LSS anomalies
 
-**Falsification Criteria**:
+Falsification Criteria:
 - No correlation between galaxy spin axis and CMB anomalies
 - Bulk flows in wrong direction relative to rotation axis
 - No redshift evolution of rotational effects
 
-### 8.2 Comprehensive Null Tests
+#### 4.3.2 Comprehensive Null Tests
 
-#### 8.2.1 CMB Null Tests
-1. **Random Sky Patches**: Analyze E-B correlations in random regions
-2. **Frequency Dependence**: Verify signal is achromatic
-3. **Mock Simulations**: Compare with full systematic simulations
+##### 4.3.2.1 CMB Null Tests
+1. Random Sky Patches: Analyze E-B correlations in random regions
+2. Frequency Dependence: Verify signal is achromatic
+3. Mock Simulations: Compare with full systematic simulations
 
-**Expected Results**: All null tests consistent with zero within $1\sigma$
+Expected Results: All null tests consistent with zero within $1\sigma$
 
-#### 8.2.2 Galaxy Survey Null Tests
-1. **Randomized Orientations**: Scramble galaxy position angles
-2. **Alternative Binning**: Use different redshift and spatial bins
-3. **Cross-Validation**: Compare with independent shape catalogs
+##### 4.3.2.2 Galaxy Survey Null Tests
+1. Randomized Orientations: Scramble galaxy position angles
+2. Alternative Binning: Use different redshift and spatial bins
+3. Cross-Validation: Compare with independent shape catalogs
 
-**Expected Results**: Null tests yield $A_{\text{dipole}} = 0.0 \pm 0.001$
+Expected Results: Null tests yield $A_{\text{dipole}} = 0.0 \pm 0.001$
 
----
 
-## 9. Theoretical Implications and Future Directions
 
-### 9.1 Quantum Gravity Phenomenology
+
+## 5. Discussion
+
+### 5.1 Theoretical Implications and Future Directions
+
+#### 5.1.1 Quantum Gravity Phenomenology
 
 Our framework represents the first observationally testable connection between quantum gravitational effects and cosmic acceleration.
 
-#### 9.1.1 LQC Parameter Constraints
+##### LQC Parameter Constraints
 Detection would provide direct constraints on LQC parameters:
-- **Barbero-Immirzi parameter**: $\gamma = 0.274 \pm 0.020$
-- **Area gap**: $\Delta = 4\sqrt{3}\pi\gamma \pm 10\%$
-- **Critical density**: $\rho_c = 0.41 \rho_{\text{Pl}} \pm 15\%$
+- Barbero-Immirzi parameter: $\gamma = 0.274 \pm 0.020$
+- Area gap: $\Delta = 4\sqrt{3}\pi\gamma \pm 10\%$
+- Critical density: $\rho_c = 0.41 \rho_{\text{Pl}} \pm 15\%$
 
-#### 9.1.2 Black Hole Interior Physics
+##### Black Hole Interior Physics
 Confirmation would validate:
-- **Torsion-regulated collapse**: No singularities in black hole interiors
-- **Baby universe production**: Mechanism for cosmic reproduction
-- **Information preservation**: Quantum information survives through bounce
+- Torsion-regulated collapse: No singularities in black hole interiors
+- Baby universe production: Mechanism for cosmic reproduction
+- Information preservation: Quantum information survives through bounce
 
-### 9.2 Cosmological Model Building
+#### 5.1.2 Cosmological Model Building
 
-#### 9.2.1 Extended Frameworks
+##### Extended Frameworks
 Natural extensions include:
-- **Multi-field inflation**: Multiple scalars with spin-torsion coupling
-- **Modified dispersion relations**: Lorentz violation from quantum gravity
-- **Extra dimensions**: Higher-dimensional spin-torsion effects
+- Multi-field inflation: Multiple scalars with spin-torsion coupling
+- Modified dispersion relations: Lorentz violation from quantum gravity
+- Extra dimensions: Higher-dimensional spin-torsion effects
 
-#### 9.2.2 Unification Prospects
+##### Unification Prospects
 Connections to fundamental physics:
-- **String theory**: Torsion from antisymmetric tensor fields
-- **Supergravity**: Gravitino spin coupling to torsion
-- **Grand unification**: Parity violation from gauge symmetry breaking
+- String theory: Torsion from antisymmetric tensor fields
+- Supergravity: Gravitino spin coupling to torsion
+- Grand unification: Parity violation from gauge symmetry breaking
 
-### 9.3 Scientific Impact
+#### 5.1.3 Scientific Impact
 
-#### 9.3.1 Theoretical Perspectives
-- **Geometric Dark Energy**: Proposes dark energy as geometric effect from spin-torsion coupling
-- **Quantum Bounce**: Offers non-singular cosmology through torsion-regulated collapse
-- **Reduced Fine-Tuning**: Geometric dilution mechanism addresses cosmological constant problem
-- **Cosmic Rotation**: Introduces potential cosmic preferred frame from black hole origin
+##### Theoretical Perspectives
+- Geometric Dark Energy: Proposes dark energy as geometric effect from spin-torsion coupling
+- Quantum Bounce: Offers non-singular cosmology through torsion-regulated collapse
+- Reduced Fine-Tuning: Geometric dilution mechanism addresses cosmological constant problem
+- Cosmic Rotation: Introduces potential cosmic preferred frame from black hole origin
 
-#### 9.3.2 Observational Prospects
-- **Quantum Gravity Constraints**: Could provide observational constraints on Planck-scale physics
-- **Parity Violation Tests**: Testable predictions for fundamental symmetry breaking
-- **Origin Scenarios**: Observational signatures of black hole universe models
-- **Multi-Probe Analysis**: Correlated signatures across multiple observational channels
+##### Observational Prospects
+- Quantum Gravity Constraints: Could provide observational constraints on Planck-scale physics
+- Parity Violation Tests: Testable predictions for fundamental symmetry breaking
+- Origin Scenarios: Observational signatures of black hole universe models
+- Multi-Probe Analysis: Correlated signatures across multiple observational channels
 
----
+### 5.2 Limitations and Future Work
 
-## 9a. Limitations and Future Work
-
-### 9a.1 Theoretical Limitations
+#### 5.2.1 Theoretical Limitations
 
 Several theoretical uncertainties should be acknowledged:
 
-**Immirzi Parameter Value**: While LQG calculations suggest $\gamma \approx 0.274$, the exact value remains subject to debate within the quantum gravity community. Our predictions scale with $\gamma$, introducing approximately 7% uncertainty in quantitative forecasts.
+Immirzi Parameter Value: While LQG calculations suggest $\gamma \approx 0.274$, the exact value remains subject to debate within the quantum gravity community. Our predictions scale with $\gamma$, introducing approximately 7% uncertainty in quantitative forecasts.
 
-**Parent Black Hole Properties**: The framework depends on assumptions about the mass, spin, and vacuum energy scale of a hypothetical parent black hole. While we show that a wide range of astrophysically plausible values yield consistent results, the specific values cannot be independently constrained without additional observational signatures.
+Parent Black Hole Properties: The framework depends on assumptions about the mass, spin, and vacuum energy scale of a hypothetical parent black hole. While we show that a wide range of astrophysically plausible values yield consistent results, the specific values cannot be independently constrained without additional observational signatures.
 
-**One-Loop Approximation**: Our derivation relies on one-loop quantum corrections. Higher-loop effects could modify the parity-odd coefficient, though the non-renormalization theorem suggests these corrections should be small.
+One-Loop Approximation: Our derivation relies on one-loop quantum corrections. Higher-loop effects could modify the parity-odd coefficient, though the non-renormalization theorem suggests these corrections should be small.
 
-**Inflationary Model Dependence**: The geometric dilution mechanism depends on the number of e-folds during inflation ($N \approx 50-60$). Different inflationary models yield slightly different predictions, introducing systematic uncertainty in the final dark energy scale.
+Inflationary Model Dependence: The geometric dilution mechanism depends on the number of e-folds during inflation ($N \approx 50-60$). Different inflationary models yield slightly different predictions, introducing systematic uncertainty in the final dark energy scale.
 
-### 9a.2 Observational Limitations
+#### 5.2.2 Observational Limitations
 
 The observational evidence faces several challenges:
 
-**Small Sample Sizes**: The JWST galaxy spin measurement is based on only 34 galaxies, requiring confirmation with much larger samples to establish statistical robustness. The 2.5σ significance is suggestive but not conclusive.
+Small Sample Sizes: The JWST galaxy spin measurement is based on only 34 galaxies, requiring confirmation with much larger samples to establish statistical robustness. The 2.5σ significance is suggestive but not conclusive.
 
-**Systematic Uncertainties**: Galaxy morphology classification, photometric redshift errors, and selection effects could introduce systematic biases comparable to or larger than the predicted signal. Comprehensive systematic error mitigation is essential.
+Systematic Uncertainties: Galaxy morphology classification, photometric redshift errors, and selection effects could introduce systematic biases comparable to or larger than the predicted signal. Comprehensive systematic error mitigation is essential.
 
-**Observational Debate**: The galaxy spin asymmetry reported by Shamir and others has been contested in the literature. Alternative explanations including large-scale structure effects, instrumental systematics, and selection biases must be carefully ruled out.
+Observational Debate: The galaxy spin asymmetry reported by Shamir and others has been contested in the literature. Alternative explanations including large-scale structure effects, instrumental systematics, and selection biases must be carefully ruled out.
 
-**Alternative Interpretations**: Even if the observational signatures are confirmed, alternative physical mechanisms could potentially produce similar effects:
-
-1. **Large-Scale Tidal Torques**: Galaxy spins could be preferentially aligned due to tidal torques from large-scale structure (cosmic web filaments), producing dipole asymmetries without requiring cosmic rotation. However, this mechanism predicts different redshift evolution and would not correlate with CMB anomalies.
-
-2. **Primordial Magnetic Fields**: Coherent primordial magnetic fields on cosmological scales could bias galaxy formation, creating spin asymmetries. This can be distinguished through independent constraints on magnetic field strength from Faraday rotation measurements.
-
-3. **Modified Gravity Without Torsion**: Alternative theories like f(R) gravity or scalar-tensor theories could modify structure formation to produce similar clustering signatures. However, these typically do not predict parity violation or galaxy spin asymmetries.
-
-4. **Observational Selection Effects**: Instrumental systematics, morphological classification biases, or photometric redshift errors could create spurious asymmetries. Rigorous null tests and independent analysis pipelines are essential to rule out these possibilities.
-
-5. **Topological Defects**: Cosmic strings or other topological defects could create preferred directions in structure formation. This can be distinguished through specific signatures in the CMB and gravitational wave backgrounds.
+Alternative Interpretations: Even if the observational signatures are confirmed, alternative physical mechanisms could potentially produce similar effects:
+1. Large-Scale Tidal Torques: Galaxy spins could be preferentially aligned due to tidal torques from large-scale structure (cosmic web filaments), producing dipole asymmetries without requiring cosmic rotation. However, this mechanism predicts different redshift evolution and would not correlate with CMB anomalies.
+2. Primordial Magnetic Fields: Coherent primordial magnetic fields on cosmological scales could bias galaxy formation, creating spin asymmetries. This can be distinguished through independent constraints on magnetic field strength from Faraday rotation measurements.
+3. Modified Gravity Without Torsion: Alternative theories like f(R) gravity or scalar-tensor theories could modify structure formation to produce similar clustering signatures. However, these typically do not predict parity violation or galaxy spin asymmetries.
+4. Observational Selection Effects: Instrumental systematics, morphological classification biases, or photometric redshift errors could create spurious asymmetries. Rigorous null tests and independent analysis pipelines are essential to rule out these possibilities.
+5. Topological Defects: Cosmic strings or other topological defects could create preferred directions in structure formation. This can be distinguished through specific signatures in the CMB and gravitational wave backgrounds.
 
 Our framework differs from these alternatives by predicting correlated signatures across CMB E-B polarization and galaxy spins, with specific spectral dependencies and amplitude ratios that uniquely identify the spin-torsion mechanism.
 
-### 9a.3 Model Falsification
+#### 5.2.3 Model Falsification
 
 The framework makes clear, falsifiable predictions:
+- CMB E-B Correlations: If CMB-S4 and LiteBIRD detect no significant E-B correlations at ultra-low multipoles (ℓ = 2–4), or detect correlations with the wrong sign or spectral dependence, the model is falsified at high confidence.
+- Galaxy Spin Asymmetry: If LSST finds no dipole pattern in galaxy spins, or finds a pattern inconsistent with the predicted amplitude ($A < 0.001$ or $A > 0.01$) or wrong axis alignment, the model is ruled out.
+- Cosmological Tensions: If future observations confirm that cosmological tensions persist or worsen despite our framework's predictions, this would indicate the model does not correctly describe the physics.
+- Consistency Tests: The framework predicts correlated signatures across multiple observables. If CMB and galaxy spin measurements yield inconsistent cosmic axes, or if the implied rotation rate differs between probes, the model fails internal consistency checks.
 
-**CMB E-B Correlations**: If CMB-S4 and LiteBIRD detect no significant E-B correlations at ultra-low multipoles (ℓ = 2-4), or detect correlations with the wrong sign or spectral dependence, the model is falsified at high confidence.
-
-**Galaxy Spin Asymmetry**: If LSST finds no dipole pattern in galaxy spins, or finds a pattern inconsistent with the predicted amplitude ($A < 0.001$ or $A > 0.01$) or wrong axis alignment, the model is ruled out.
-
-**Cosmological Tensions**: If future observations confirm that cosmological tensions persist or worsen despite our framework's predictions, this would indicate the model does not correctly describe the physics.
-
-**Consistency Tests**: The framework predicts correlated signatures across multiple observables. If CMB and galaxy spin measurements yield inconsistent cosmic axes, or if the implied rotation rate differs between probes, the model fails internal consistency checks.
-
-### 9a.4 Future Directions
-
-Several extensions and improvements are worth pursuing:
-
-**Refined Calculations**: Higher-order quantum corrections, improved treatment of the spin-torsion coupling during inflation, and more detailed modeling of the parent black hole interior could sharpen quantitative predictions.
-
-**Expanded Observational Program**: Beyond CMB and galaxy spins, the framework may predict signatures in gravitational wave observations, pulsar timing arrays, or ultra-high-energy cosmic rays that warrant investigation.
-
-**Connection to Particle Physics**: The four-fermion interaction could have consequences for particle physics phenomenology that have not been fully explored, potentially providing independent tests.
-
-**Alternative Scenarios**: Investigating whether non-rotating black holes or black holes with different properties could produce similar observable signatures would help constrain the parameter space.
-
----
-
-## 9b. Discussion
+### 5.3 Additional Discussion: Geometric Dilution Parameter
 
 In our framework, the constant contribution to the effective cosmological constant is not inserted ad hoc, but instead emerges from the interplay between a parity-odd spin–torsion interaction and inflationary dilution. This quantity can be compactly expressed as:
 
-$$\mathcal{g} \ \equiv \ \frac{\alpha}{M} \times \mathcal{D}_{\rm inf}$$
+$$\xi \ \equiv \ \frac{\alpha}{M} \times \mathcal{D}_{\rm inf}$$
 
 where $\alpha/M$ is the loop coefficient from the one-loop parity-odd torsion term, and $\mathcal{D}_{\rm inf}$ is the suppression factor from inflation. Substituting into our effective cosmological constant gives:
 
-$$\Lambda_{\rm eff} = 3\omega^2 + \mathcal{g}$$
+$$\Lambda_{\rm eff} = 3\Omega^2 + \xi$$
 
-This constant, denoted $\mathcal{g}$ and referred to as the geometric dilution parameter, represents the product of the loop coefficient and inflationary suppression factor. It naturally yields a value on the order of $10^{-33} \,{\rm eV}^2$, consistent with the observed dark energy scale. Importantly, its value is fixed entirely by early-universe physics, requiring no fine-tuning.
+This constant, denoted $\xi$ and referred to as the geometric dilution parameter, represents the product of the loop coefficient and inflationary suppression factor. It naturally yields a value on the order of $10^{-33} \,{\rm eV}^2$, consistent with the observed dark energy scale. Importantly, its value is fixed entirely by early-universe physics, requiring no fine-tuning.
 
 ---
 
-## 10. Conclusions
+## 6. Conclusions
 
 We have presented a comprehensive theoretical framework for dark energy connecting quantum gravitational effects in black hole interiors to cosmic acceleration through spin-torsion cosmology.
 
-### 10.1 Theoretical Achievements
+### 6.1 Theoretical Achievements
 
 1. **Complete UV Derivation**: First rigorous derivation of parity-odd dark energy from LQG with fermions, building on the foundational work of Freidel et al. (2005) and Mercuri (2006) [2,3], showing how the Holst action and Barbero-Immirzi parameter naturally produce the required effective terms through one-loop calculations.
 
@@ -1014,7 +988,7 @@ We have presented a comprehensive theoretical framework for dark energy connecti
 
 4. **Natural Parameter Values**: Showed that all key parameters (bounce density, parent BH mass/spin, vacuum energy scale, Immirzi parameter) arise naturally from well-understood physics without exotic fine-tuning.
 
-### 10.2 Observational Evidence
+### 6.2 Observational Evidence
 
 1. **JWST Confirmation**: Recent deep field observations showing 71-29% galaxy spin asymmetry (24 of 34 galaxies, p ≈ 0.012) provide preliminary observational evidence consistent with cosmic parity violation predicted by our rotating universe model and aligned with Shamir's (2012-2022) pioneering observations [7,8]. The small sample size requires confirmation with larger surveys.
 
@@ -1024,7 +998,7 @@ We have presented a comprehensive theoretical framework for dark energy connecti
 
 4. **Multi-Survey Consistency**: Galaxy spin asymmetry detected across SDSS, Pan-STARRS, HST, and JWST with consistent dipole axis, indicating a robust cosmological signal.
 
-### 10.3 Novel Theoretical Contributions
+### 6.3 Novel Theoretical Contributions
 
 While building on established foundations, our work makes several original contributions:
 
@@ -1036,7 +1010,7 @@ While building on established foundations, our work makes several original contr
 
 4. **Comprehensive Observational Framework**: Complete validation program with systematic error analysis, detection timelines, and falsification criteria.
 
-### 10.4 Discovery Timeline and Prospects
+### 6.4 Discovery Timeline and Prospects
 
 1. **Near-Term Evidence**: $3.7\sigma$ combined significance by 2028 through Simons Observatory and LSST Y3 data.
 
@@ -1046,7 +1020,7 @@ While building on established foundations, our work makes several original contr
 
 4. **Experimental Validation**: Clear roadmap for discovery through existing and planned experiments with realistic systematic control.
 
-### 10.5 Potential Scientific Impact
+### 6.5 Potential Scientific Impact
 
 If observationally confirmed, this framework could have significant implications for several areas of physics:
 
@@ -1058,7 +1032,7 @@ If observationally confirmed, this framework could have significant implications
 
 4. **Parity Violation**: Could represent detection of fundamental symmetry breaking in gravity through cosmic birefringence and galaxy spin asymmetries.
 
-### 10.6 Acknowledgment of Foundational Work
+### 6.6 Acknowledgment of Foundational Work
 
 Our framework stands on the shoulders of giants, building upon:
 
@@ -1067,7 +1041,7 @@ Our framework stands on the shoulders of giants, building upon:
 - **Lior Shamir's** observational documentation of large-scale galaxy spin asymmetries [7,8]
 - **Recent efforts** by Izaurieta et al. and Akhshabi & Zamani on torsion solutions to cosmological tensions [9,10]
 
-### 10.7 Future Outlook
+### 6.7 Future Outlook
 
 The spin-torsion framework for dark energy represents a testable approach connecting quantum gravitational effects in black hole interiors to large-scale cosmic acceleration. By deriving dark energy from geometric effects in Einstein-Cartan theory, the framework offers a potential explanation for the observed cosmological constant.
 
@@ -1137,24 +1111,24 @@ We thank the theoretical physics community for developing the mathematical frame
 
 ---
 
-## Glossary of Constants, Parameters, and Equations
+## Appendix B: Glossary of Constants, Parameters, and Equations
 
 Format: Markdown table with columns: Symbol/Name | Definition/Formula | Context | Novelty
 
 | Symbol/Name | Definition / Formula | Context | Novelty |
 | --- | --- | --- | --- |
-| Spin–torsion coupling constant ($\Lambda_{\rm eff}$) | $\Lambda_{\rm eff} = \Lambda + 3\omega^2$ | Effective cosmological constant including rotational-vorticity contribution. | Substantially Novel |
+| Spin–torsion coupling constant ($\Lambda_{\rm eff}$) | $\Lambda_{\rm eff} = \Lambda + 3\Omega^2$ | Effective cosmological constant including rotational-vorticity contribution. | Substantially Novel |
 | Torsion-induced 4-fermion term | $\mathcal L_{AA} = -\tfrac{3\pi G}{2}\,\tfrac{\gamma^2}{\gamma^2+1}\,J_A^2$ | From Einstein–Cartan–Holst theory; axial–axial contact term among fermions. | Established |
 | Parity-odd spin–torsion operator | $\mathcal L_{\text{odd}} = \tfrac{\alpha}{M}\,\varepsilon^{\mu\nu\rho\sigma} K_{\mu\nu}{}^{ab} R_{\rho\sigma ab}$ | One-loop term linking torsion and curvature, source of cosmic birefringence/EB correlations. | Novel |
 | Alpha × Dilution constant | $\tfrac{\alpha}{M} \times \mathcal{D}_{\rm inf}$ | Connects loop physics to dark energy scale via inflationary dilution. | Novel |
-| Geometric Dilution Parameter ($\mathcal{g}$) | $\mathcal{g} \equiv \tfrac{\alpha}{M} \times \mathcal{D}_{\rm inf}$ | Constant term in $\Lambda_{\rm eff}$; predicts observed dark energy scale without fine-tuning. Represents product of loop coefficient and inflationary suppression factor. | Novel |
+| Geometric Dilution Parameter ($\\xi$) | $\\xi \\equiv \\tfrac{\\alpha}{M} \\times \\mathcal{D}_{\\rm inf}$ | Constant term in $\\Lambda_{\\rm eff}$; predicts observed dark energy scale without fine-tuning. Represents product of loop coefficient and inflationary suppression factor. | Novel |
 | Spin asymmetry function | $A(z) \approx 0.003\,(1+z)^{-0.5} e^{-z/2}$ | Predicts handedness asymmetry in galaxy spins vs redshift. | Novel |
 | Rotation-energy fraction | $\Omega_\omega(z)$ | Ratio of vorticity energy density to critical density over time. | Substantially Novel |
 | Fine-tuning score | $\text{Score} = \tfrac{\text{Natural scale}}{\text{Observed value}}$ | Compares tuning in $\Lambda$CDM, quintessence, and spin–torsion models. | Substantially Novel |
 | Naturalness comparator | — | Table of observed vs natural scales across models. | Novel |
 | Combined significance | $\sigma_{\rm combined} = \sqrt{\sigma_{\rm CMB}^2+\sigma_{\rm galaxy}^2}$ | Combines detection significance from EB & spin-asymmetry signals. | Established |
 
-Cross-references: The Geometric Dilution Parameter $\mathcal{g}$ is introduced in the [Discussion](#9a-discussion) and used to express the constant term in $\Lambda_{\rm eff}$.
+Cross-references: The Geometric Dilution Parameter $\\xi$ is introduced in the Discussion section and used to express the constant term in $\\Lambda_{\\rm eff}$.
 
 ---
 
@@ -1165,7 +1139,7 @@ Cross-references: The Geometric Dilution Parameter $\mathcal{g}$ is introduced i
 #### A1.1 From Effective Cosmological Constant to Hubble Parameter
 
 Starting with our effective cosmological constant:
-$$\Lambda_{\rm eff} = 3\omega^2 + \left(\frac{\alpha}{M}\right)\mathcal{D}_{\rm inf}$$
+$$\\Lambda_{\\rm eff} = 3\\Omega^2 + \\xi$$
 
 The Friedmann equation in the late universe (matter + dark energy dominated) is:
 $$H^2(z) = H_0^2 \left[\Omega_m(1+z)^3 + \Omega_{\Lambda,\rm eff}\right]$$
@@ -1179,8 +1153,8 @@ $$H_0^2 = \frac{8\pi G}{3}\rho_{m,0} + \frac{\Lambda_{\rm eff}}{3}$$
 
 Given:
 - Matter density today: $\Omega_m = 0.315 \pm 0.007$ (Planck 2018)
-- Rotation contribution: $3\omega^2 \approx 3 \times (10^{-18} \text{ s}^{-1})^2$
-- Parity-odd contribution: $(\alpha/M)\mathcal{D}_{\rm inf} \approx 10^{-35} \text{ eV}^2$
+- Rotation contribution: $3\\Omega^2 \\approx 3 \\times (10^{-18} \\text{ s}^{-1})^2$
+- Parity-odd contribution: $\\xi \\approx 10^{-35} \\text{ eV}^2$
 
 Step-by-step calculation:
 1. Convert to consistent units: $\Lambda_{\rm eff} = (2.3 \text{ meV})^4/(c\hbar)^3$
@@ -1211,12 +1185,4 @@ The reduction from Planck's value occurs because enhanced early expansion suppre
 
 ---
 
-**Word Count**: ~35,000 words  
-**Equations**: 80+ beautifully formatted mathematical expressions  
-**Figures**: 11 comprehensive scientific illustrations  
-**Tables**: 8 detailed data tables with observational constraints  
-**References**: Comprehensive bibliography with cutting-edge theoretical and observational sources
-
 This represents a comprehensive presentation of the spin-torsion dark energy framework, integrating theoretical derivations with observational predictions and clear experimental validation pathways while properly acknowledging the foundational work that makes this synthesis possible.
-
----

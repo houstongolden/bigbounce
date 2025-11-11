@@ -87,5 +87,5 @@ When editing the paper content:
 ## Contact Information
 
 Author: Houston Golden
-Email: houston@bamf.ai
+Email: houston@bamf.com
 LinkedIn: houstongolden

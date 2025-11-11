@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bigbounce.md — Rendered Preview</title>
+    <link rel="icon" href="public/images/figure1_lqg_holst_derivation_enhanced.png">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            color: #2c3e50;
+            background: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .layout { overflow-x: clip; }
+        /* Ensure anchor targets account for sticky topbar (~52px) */
+        #md-content h1,
+        #md-content h2,
+        #md-content h3,
+        #md-content h4,
+        #md-content h5,
+        #md-content h6 {
+            scroll-margin-top: 60px;
+        }
+        /* Responsive content helpers */
+        article, .container {
+            width: 100%;
+        }
+        article table {
+            display: block;
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-collapse: collapse;
+        }
+        article table th,
+        article table td {
+            padding: 0.4rem 0.6rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        article iframe, article video {
+            max-width: 100%;
+        }
+        article pre, article code {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
+        .password-overlay {
+            position: fixed;
+            left: 0; right: 0; top: 0; bottom: 0;
+            background: rgba(15,23,42,0.96);
+            color: #e2e8f0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+        .password-form {
+            background: #0b1020;
+            color: #e2e8f0;
+            padding: 1.25rem 1.25rem 1rem;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 380px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+        }
+        .password-form h2 {
+            margin: 0 0 0.75rem 0;
+            font-size: 1.1rem;
+            color: #93c5fd;
+        }
+        .password-form input[type="password"] {
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            border: 1px solid #1f2937;
+            border-radius: 6px;
+            background: #0f172a;
+            color: #e2e8f0;
+            margin: 0.5rem 0 0.75rem;
+        }
+        .password-form .btn {
+            width: 100%;
+        }
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #0f172a;
+            color: #fff;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        .topbar a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .layout {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 280px;
+            background: #0b1020;
+            color: #e2e8f0;
+            padding: 1rem;
+            position: sticky;
+            top: 52px;
+            height: calc(100vh - 52px);
+            overflow-y: auto;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            font-size: 1rem;
+            color: #93c5fd;
+        }
+        .toc {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin: 0.25rem 0;
+        }
+        .toc a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: block;
+            padding: 0.25rem 0.25rem;
+        }
+        .toc a:hover { color: #ffffff; }
+        .toc .lvl-2 { margin-left: 0.75rem; font-size: 0.92rem; }
+        .toc .lvl-3 { margin-left: 1.25rem; font-size: 0.9rem; }
+        .btn {
+            display: inline-block;
+            background: #10b981;
+            color: #ffffff;
+            border: none;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .btn:hover { background: #0ea371; }
+        .container {
+            max-width: 1100px;
+            margin: 1.25rem auto 4rem;
+            padding: 0 20px;
+        }
+        .content-wrap { flex: 1; min-width: 0; }
+        article { overflow-wrap: anywhere; word-break: break-word; }
+        article p, article li {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            -webkit-hyphens: auto;
+            hyphens: auto;
+        }
+        article img, article svg, article canvas, article video, article figure {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+        }
+        /* Scale markdown images to container on small screens */
+        article img {
+            width: 100%;
+            height: auto;
+        }
+        article h1, article h2, article h3, article h4, article h5, article h6 {
+            color: #0f172a;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        /* Responsive type scaling */
+        article { font-size: clamp(16px, 1.9vw, 18px); }
+        #md-content h1 { font-size: clamp(28px, 5.5vw, 42px); }
+        #md-content h2 { font-size: clamp(22px, 4.5vw, 32px); }
+        #md-content h3 { font-size: clamp(18px, 3.8vw, 24px); }
+        article pre {
+            background: #0b1020;
+            color: #e2e8f0;
+            padding: 1rem;
+            overflow: auto;
+            border-radius: 6px;
+        }
+        .loading, .error {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #334155;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+        .error { border-color: #fecaca; background: #fef2f2; color: #991b1b; }
+        .meta-panel {
+            background: #f8f9fa;
+            border-left: 4px solid #007bff;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .meta-panel ul {
+            margin: 0.25rem 0 0 1.25rem;
+        }
+        .mobile-menu-btn {
+            display: none;
+            position: fixed;
+            left: 12px;
+            bottom: 18px;
+            z-index: 120;
+            border: none;
+            border-radius: 28px;
+            padding: 0.6rem 0.75rem;
+            background: #0f172a;
+            color: #fff;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+        }
+        @media (max-width: 980px) {
+            .sidebar {
+                position: fixed;
+                left: 0;
+                top: 52px;
+                height: calc(100vh - 52px);
+                transition: transform 0.25s ease;
+                width: 85vw;
+                max-width: 360px;
+                transform: translateX(-100%);
+                z-index: 2000;
+            }
+            .sidebar.open { transform: translateX(0); }
+            .mobile-menu-btn { display: inline-block; }
+            .container { padding: 0 20px; }
+            .topbar { padding: 0.6rem 0.8rem; }
+            .toc a { padding: 0.4rem 0.25rem; }
+            #md-content h1, #md-content h2 { scroll-margin-top: 68px; }
+        }
+        @media (max-width: 640px) {
+            .container { padding: 0 18px; }
+            .toc a { font-size: 0.95rem; }
+            article pre { font-size: 0.92rem; }
+            /* Mobile heading sizes */
+            #md-content h1 { font-size: 1.6rem; }
+            #md-content h2 { font-size: 1.35rem; }
+            #md-content h3 { font-size: 1.15rem; }
+        }
+        /* Ensure MathJax does not overflow on mobile */
+        mjx-container { max-width: 100%; overflow-x: auto; overflow-y: hidden; white-space: normal; }
+        mjx-container[display="inline"] { display: inline-block; max-width: 100%; }
+    </style>
+    <!-- Marked.js for Markdown rendering (load before inline script) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- MathJax for LaTeX rendering -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="password-overlay" id="passwordOverlay">
+        <div class="password-form">
+            <h2>Enter password to view the paper</h2>
+            <form id="passwordForm">
+                <input type="password" id="passwordInput" placeholder="Enter password" required>
+                <button class="btn" type="submit" style="margin-top:0.5rem;">Unlock</button>
+                <div id="errorMessage" class="error" style="display:none; margin-top:0.75rem;">Incorrect password. Please try again.</div>
+            </form>
+        </div>
+    </div>
+    <div class="topbar">
+        <div>
+            <strong>Rendered Preview:</strong> bigbounce.md
+        </div>
+    </div>
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <h3>Contents</h3>
+            <ul class="toc" id="toc"></ul>
+        </nav>
+        <div class="content-wrap">
+            <div class="container">
+                <article id="md-content">
+                    <div class="loading" id="status">Loading latest bigbounce.md…</div>
+                </article>
+            </div>
+        </div>
+    </div>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle table of contents">☰</button>
+
+    <script>
+    (function() {
+        // Gate: require password at this URL too
+        var overlayEl = document.getElementById('passwordOverlay');
+        var unlocked = (typeof sessionStorage !== 'undefined') && sessionStorage.getItem('paperUnlocked') === 'true';
+        if (!unlocked) {
+            if (overlayEl) overlayEl.style.display = 'flex';
+            var form = document.getElementById('passwordForm');
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var pwd = document.getElementById('passwordInput').value;
+                    var err = document.getElementById('errorMessage');
+                    if (pwd === 'houston') {
+                        if (typeof sessionStorage !== 'undefined') sessionStorage.setItem('paperUnlocked', 'true');
+                        if (overlayEl) overlayEl.style.display = 'none';
+                        // Continue rendering after unlock
+                        start();
+                    } else {
+                        if (err) { err.style.display = 'block'; err.textContent = 'Incorrect password. Please try again.'; }
+                    }
+                });
+            }
+        }
+        function start() {
+        function renderMarkdown(text) {
+            // Configure marked
+            marked.setOptions({
+                gfm: true,
+                breaks: false,
+                smartLists: true,
+                smartypants: false
+                , headerIds: true, mangle: false
+            });
+            return marked.parse(text);
+        }
+
+        function typesetMath() {
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                return window.MathJax.typesetPromise();
+            }
+            return Promise.resolve();
+        }
+
+        const contentEl = document.getElementById('md-content');
+        const statusEl = document.getElementById('status');
+        const tocEl = document.getElementById('toc');
+        const sidebarEl = document.getElementById('sidebar');
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+
+        function tryFetch(url) {
+            return fetch(url, { cache: 'no-store' }).then(function(resp) {
+                if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                return resp.text();
+            });
+        }
+
+        // Primary: local file served by any static server
+        // Fallback: GitHub raw if opened via file:// or local fetch fails
+        var localUrl = '/bigbounce.md';
+        var githubRaw = 'https://raw.githubusercontent.com/houstongolden/bigbounce/main/bigbounce.md';
+
+        function slugify(text) {
+            return text.toLowerCase()
+                .replace(/[^a-z0-9\\s-]/g, '')
+                .trim()
+                .replace(/\\s+/g, '-')
+                .replace(/-+/g, '-');
+        }
+
+        function buildTocAndIds(rootEl) {
+            if (!tocEl) return;
+            tocEl.innerHTML = '';
+            var headings = rootEl.querySelectorAll('h1, h2, h3');
+            var frag = document.createDocumentFragment();
+            headings.forEach(function(h) {
+                if (!h.id) {
+                    h.id = slugify(h.textContent || h.innerText || '');
+                }
+                var li = document.createElement('li');
+                if (h.tagName === 'H2') li.className = 'lvl-2';
+                if (h.tagName === 'H3') li.className = 'lvl-3';
+                var a = document.createElement('a');
+                a.href = '#' + h.id;
+                a.textContent = h.textContent;
+                li.appendChild(a);
+                frag.appendChild(li);
+            });
+            tocEl.appendChild(frag);
+        }
+
+        function initMobileToggle() {
+            if (!mobileBtn || !sidebarEl) return;
+            mobileBtn.addEventListener('click', function() {
+                sidebarEl.classList.toggle('open');
+            });
+            document.addEventListener('click', function(ev) {
+                if (!sidebarEl.contains(ev.target) && ev.target !== mobileBtn) {
+                    sidebarEl.classList.remove('open');
+                }
+            });
+        }
+
+        function loadMarkdown() {
+            var isFileProtocol = window.location.protocol === 'file:';
+            var primary = isFileProtocol ? githubRaw : localUrl;
+            var secondary = isFileProtocol ? localUrl : githubRaw;
+
+            return tryFetch(primary).catch(function() {
+                return tryFetch(secondary);
+            });
+        }
+
+        loadMarkdown()
+        .then(function(md) {
+            const html = renderMarkdown(md);
+            contentEl.innerHTML = html;
+            if (statusEl) statusEl.remove();
+            buildTocAndIds(contentEl);
+            initMobileToggle();
+            return typesetMath();
+        })
+        .catch(function(err) {
+            console.error(err);
+            contentEl.innerHTML = '';
+            const div = document.createElement('div');
+            div.className = 'error';
+            div.innerHTML = 'Failed to load bigbounce.md: ' +
+                (err && err.message ? err.message : err) +
+                '<br><br>' +
+                'Tip: Run a local server (e.g., <code>node server.js</code> or <code>python -m http.server 8000</code>) and open this page via http:// to allow fetching local files.';
+            contentEl.parentNode.insertBefore(div, contentEl);
+        });
+        }
+        // If already unlocked, start immediately
+        if (unlocked) { start(); }
+    })();
+    </script>
+</body>
+</html>
+
+

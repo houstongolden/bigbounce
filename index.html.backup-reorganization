@@ -876,7 +876,7 @@
                     <a href="interactive-data.html#figure7" target="_blank">Figure 7: Detection Timeline</a>
                     
                     <h4>Contact</h4>
-                    <a href="mailto:houston@bamf.ai">Email Author</a>
+                    <a href="mailto:houston@bamf.com">Email Author</a>
                     <a href="https://linkedin.com/in/houstongolden" target="_blank">LinkedIn Profile</a>
                     <a href="#about-author">About the Author</a>
                 </div>
@@ -888,7 +888,7 @@
                 <div class="contact-header">
                     <h4>Contact the Author</h4>
                     <div class="contact-info">
-                        <a href="mailto:houston@bamf.ai">houston@bamf.ai</a>
+                        <a href="mailto:houston@bamf.com">houston@bamf.com</a>
                         <span>|</span>
                         <a href="https://linkedin.com/in/houstongolden" target="_blank">LinkedIn: houstongolden</a>
                     </div>
@@ -2941,7 +2941,7 @@ def build_hierarchical_model(data):
                             
                             <div style="margin-top: 1.5rem;">
                                 <strong>Contact Information:</strong><br>
-                                <span style="margin-right: 2rem;">📧 <a href="mailto:houston@bamf.ai">houston@bamf.ai</a></span>
+                                <span style="margin-right: 2rem;">📧 <a href="mailto:houston@bamf.com">houston@bamf.com</a></span>
                                 <span>🔗 <a href="https://linkedin.com/in/houstongolden" target="_blank">LinkedIn Profile</a></span>
                             </div>
                         </div>
@@ -2952,7 +2952,7 @@ def build_hierarchical_model(data):
                         <h4>Contact the Author</h4>
                         <p>For questions about this research or potential collaborations:</p>
                         <div style="margin-top: 1rem;">
-                            <a href="mailto:houston@bamf.ai" style="margin-right: 2rem;">houston@bamf.ai</a>
+                            <a href="mailto:houston@bamf.com" style="margin-right: 2rem;">houston@bamf.com</a>
                             <a href="https://linkedin.com/in/houstongolden" target="_blank">LinkedIn: houstongolden</a>
                         </div>
                     </div>

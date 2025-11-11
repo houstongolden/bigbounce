@@ -2,12 +2,12 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3003;
 
-// Serve static files from the current directory
+// Serve static files (default index.html enabled)
 app.use(express.static('.'));
 
-// Handle root route
+// Explicit root route to index.html (password gate)
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
