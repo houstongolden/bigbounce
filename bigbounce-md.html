@@ -37,11 +37,44 @@
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             border-collapse: collapse;
+            /* Ensure table has minimum width to trigger horizontal scroll on mobile */
+            min-width: 600px;
         }
         article table th,
         article table td {
-            padding: 0.4rem 0.6rem;
+            padding: 0.6rem 0.8rem;
             border-bottom: 1px solid #e5e7eb;
+            /* Prevent cells from being too narrow */
+            min-width: 120px;
+            /* Prevent text wrapping that makes content illegible */
+            white-space: normal;
+            vertical-align: top;
+        }
+        /* Allow first column (labels) to be narrower */
+        article table th:first-child,
+        article table td:first-child {
+            min-width: 140px;
+        }
+        /* Formula/definition columns need more space */
+        article table th:nth-child(2),
+        article table td:nth-child(2) {
+            min-width: 200px;
+        }
+        @media (max-width: 768px) {
+            article table {
+                /* Slightly narrower min-width on mobile to reduce excessive scroll */
+                min-width: 550px;
+                font-size: 0.9rem;
+            }
+            article table th,
+            article table td {
+                padding: 0.5rem 0.7rem;
+                min-width: 110px;
+            }
+            article table th:nth-child(2),
+            article table td:nth-child(2) {
+                min-width: 180px;
+            }
         }
         article iframe, article video {
             max-width: 100%;

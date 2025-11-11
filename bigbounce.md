@@ -458,7 +458,7 @@ We present two complementary perspectives on tension resolution: an overview of 
 
 #### 3.3.1 Tension Resolution Overview
 
-![Tension Resolution Overview](public/images/figure_3a_tension_resolution.png)
+![Tension Resolution Overview](public/images/figure_3a_tension_overview.png)
 
 *Figure 3A: Qualitative tension-resolution mechanisms in spin-torsion cosmology, showing (A) conceptual pathways by which modified expansion near recombination could affect H₀ inference, (B) qualitative expectations for structure-growth modifications, (C) historical evolution of cosmological tensions from 2010–2025, and (D) schematic positioning among dark-energy models. No quantitative posterior distributions or model-selection statistics are presented; such analyses require full joint fitting (outlined in Section 3.6) and are deferred to future work. [Source data: public/spreadsheets/figure_3a_tension_overview_complete_data.xlsx]*
 
